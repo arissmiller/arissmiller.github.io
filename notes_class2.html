@@ -1,0 +1,81 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+<style>
+  body {
+    background-color: #ADD8E6;
+  }
+  h2 {
+    background-color: #FFFFFF;
+  }
+  h3 {
+    text-decoration:underline black;
+  }
+</style>
+
+<h1 id="class-2-notes">Class 2 Notes</h1>
+
+<h2 id="definitions">Definitions</h2>
+
+<h3 id="probability-function">Probability function:</h3>
+
+<ul>
+  <li>\(P(E) = n(E)/n(S)\)</li>
+  <li>Probability of any event e is a number between and including 0 and 1</li>
+  <li>The sum of all probabilities in the sample space is 1</li>
+  <li>If an event cannot occur its probability is 0</li>
+  <li>if an event is certain, the probability is 1</li>
+  <li>probability function is a mapping from an event to a number</li>
+</ul>
+
+<h3 id="complementary-events">Complementary events:</h3>
+
+<ul>
+  <li>\(P(A^c) = 1 - P(A)\)</li>
+</ul>
+
+<h3 id="mutually-exclusive-events">Mutually Exclusive Events:</h3>
+
+<ul>
+  <li>if A and B are mutually exclusive, \(P(A \cup B)  = P(A) + P(B)\)</li>
+  <li>if S has an infinite number events, and all are mutually exclusive,
+then the probability of the union of all events is the sum of all their
+individual probabilities</li>
+</ul>
+
+<h3 id="in-general">In General:</h3>
+<ul>
+  <li>Probability of the null set is 0 (probability of no outcome is 0)</li>
+  <li>if A is a subset of B, then  \( P(A) \leq P(B)\)</li>
+  <li>\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</li>
+</ul>
+
+<h3 id="three-events-that-are-not-mutually-exclusive">Three events that are not mutually exclusive:</h3>
+<ul>
+  <li>\(P(A \cup  B \cup C) = P(A) + P(B) + P(C) - P(A \cap B) - P(A \cap C) - P (B \cap C) + P (A \cap B \cap C) \)</li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="probability-that-a-card-drawn-at-random-from-a-deck-of-cards-is-either-a-9-or-a-diamond">Probability that a card drawn at random from a deck of cards is either a 9 or a diamond:</h3>
+
+<p>\(P(9 \cup D) = \frac{4}{52} + \frac{13}{52} - \frac{1}{52} = \frac{16}{51} \approx 0.30\)</p>
+
+<h3 id="in-a-hostpital-unit-there-are-8-nurses-and-5-physicians-7-nurses-and-3-physicians-are-female-if-a-saff-person-is-selected-find-the-probability-that-the-subject-is-a-nurse-or-a-male">In a hostpital unit there are 8 nurses and 5 physicians, 7 nurses and 3 physicians are female. If a saff person is selected, find the probability that the subject is a nurse or a male.</h3>
+
+<p>\(P(Nurse \cup Male) = P(N) + P(M) - P(M \cup N)\)</p>
+
+<h3 id="given-one-card-is-drawn-from-a-deck-what-is-p7-or-8-or-9">Given one card is drawn from a deck. What is P(7 or 8 or 9):</h3>
+
+<p>\(P(7 \cup 8 \cup 9) = P(7) + P(8) + P(9)\)</p>
+
+<h3 id="pspade-or-queen-or-king">P(spade or queen or king):</h3>
+<p>\(P(S) + P(Q) + P(K) - P(S \cap Q) - P(S \cap K)\)</p>
+
+<h3 id="club-or-face-card">Club or face card:</h3>
+<p>\( P(C) + P(F) - P(C \cap F)\)</p>
+
+<h3 id="ace-or-diamond-or-heart">Ace or Diamond or Heart:</h3>
+<p>\(P(A) + P(H) + P(D) - P(A \cap D) - P(A \cap H)\)</p>
+
+<h3 id="or-10-or-spade-or-club">9 or 10 or spade or club:</h3>
+<p>\(P(9) + P(10) + P(S) + P(C) - P(9 \cap S) - P(10 \cap S) - P(9 \cap C) - P(10 \cap C)\)</p>
