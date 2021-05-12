@@ -1,0 +1,263 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+<style>
+  body {
+    background-color: #ADD8E6;
+  }
+  h2 {
+    background-color: #FFFFFF;
+  }
+  h3 {
+    text-decoration:underline black;
+  }
+</style>
+
+<h1 id="class-3-notes-ch-24-conditional-probability-may-12">Class 3 Notes: Ch 2.4 Conditional Probability (May 12)</h1>
+
+<h2 id="defintitions">Defintitions</h2>
+
+<h3 id="conditional-probability">Conditional Probability:</h3>
+
+<ul>
+  <li>The probability of an event A may have to be adjusted if we know that some related event B has already occurred.</li>
+</ul>
+
+<h3 id="dpendent-events">Dpendent Events:</h3>
+<ul>
+  <li>
+    <p>When the outcome or occurrence affects the outcome or occurrence of the second event in such a way that the probability has changed.</p>
+  </li>
+  <li>
+    <p><strong>Example:</strong> Drawing a card from a deck without replacing it then drwing a second card</p>
+  </li>
+  <li>
+    <p><strong>Example:</strong> selecting a ball from a bucket, not replacing it, then selecting a second ball</p>
+  </li>
+</ul>
+
+<h3 id="multiplication-rule-for-dependent-events-conditional-probability">Multiplication rule for dependent events (Conditional Probability)</h3>
+
+<ul>
+  <li>
+    <p>When 2 events, A and B, are dependent, the probability of both occurring is \(P(A \cap B) = P(A) \cdot P(B \mid A)\)</p>
+  </li>
+  <li>
+    <p>\(P(B \mid A)\) is read as Probability of B given A</p>
+  </li>
+  <li>
+    <p>\(P(A \mid B \) is read as Probability of A given B</p>
+  </li>
+</ul>
+
+<h3 id="conditional-probability-1">Conditional Probability:</h3>
+
+<ul>
+  <li>
+    <p>Any Probability that is revised to take into account the known occurrence of other events.</p>
+  </li>
+  <li>
+    <p>Effect of additional information is to revise (possibly to shrink) the sample space \(S \to S’\)</p>
+  </li>
+</ul>
+
+<h3 id="conditonal-probability-formula">Conditonal Probability Formula:</h3>
+
+<p>\(P(A \mid B) = \frac{P(A \cap B)}{P(B)}\)
+  also:
+  \(P(B \mid A) = \frac{P(A \cap B)}{P(A)}</p>
+
+<h3 id="probabilites-for-at-least-questions-see-ex9-and-10">Probabilites for “at least” questions (see ex.9 and 10)</h3>
+
+<ul>
+  <li>Multiplication rules for ocmplementary events</li>
+  <li>sometimes it is easier tofind compement than to calculate all possibilities</li>
+</ul>
+
+<h3 id="calculating-unconditional-and-inverse-probabilities">Calculating unconditional and inverse probabilities:</h3>
+
+<ul>
+  <li>Partitioned sample space, (broken up into n mutually exclusive events)</li>
+  <li>Sample space is union of n independent events, since there is no overlap we do not have to subtract intersections \(S = \bigcup \limits_{i=1}^{n} A_{i}\)</li>
+  <li>No intersection between individual events, written as \(A_i \cap A_j = \emptyset\)</li>
+  <li>\(i \neq j\)</li>
+  <li>\(P(Ai \gt 0)\)</li>
+  <li>The probability for an event is the sum of all conditional probabilities, so</li>
+  <li>\(P(B) = \sum^{n}_{i = 1} P(B \mid A_i) \cdot P(A_i)\)</li>
+</ul>
+
+<h3 id="bayes-theorem">Baye’s Theorem</h3>
+
+<ul>
+  <li>Extension of conditional probability</li>
+  <li>Inverse Probbility: If we know \(P(B \mid A_i)\) for all \(A_i\), then we can find \(P(A_i \mid B)\)</li>
+  <li>
+    <p>\(P(A_j \mid B) = \frac{P(B \mid A_j) \cdot P(A_j)}{\sum^{n}_{i =1} P(B\mid A_j) \cdot P(A_j)}\)</p>
+  </li>
+  <li>
+    <p>The above means the conditional probability of this event, divided by the sum of all probabilities</p>
+  </li>
+  <li>Questions to ask
+    <ul>
+      <li>
+        <p>Is the problem asking for an unconditinoal probability (partitioned sample space where \(\sum P(B \mid A_i)\)) or a conditional probability (Baye’s thm)?</p>
+
+        <ul>
+          <li>
+            <p>If unconditional, let B denote the ecent whose probability you are looking for</p>
+          </li>
+          <li>
+            <p>If conditional, let B denote the event that has already happened</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>Once B is identified, go back and assign all the \(A_i\)’s</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="of-residents-of-a-city-had-homeowners-insurance-event-h-with-comapny-x-of-these-clients-27-also-had-automobile-insurance-iwth-company-x-event-a-if-a-resident-is-selected-at-random-find-the-probability-that-they-have-both-h-and-a-with-company-x">2.53% of residents of a city had homeowners insurance (event H) with comapny X. Of these clients, 27% also had automobile insurance iwth company X (event A). If a resident is selected at random, find the probability that they have both H and A with company X.</h3>
+
+<p>\(P(H \cap A) = P(H) \cdot P(A \mid H)\)</p>
+
+<p>\(0.53 \cdot 0.27 = 0.1431\)</p>
+
+<h3 id="cards-are-drawn-from-a-deck-and-not-replaced-find-the-probability-of-these-events">3 cards are drawn from a deck and not replaced. Find the probability of these events:</h3>
+
+<h4 id="p3-jacks">P(3 Jacks)</h4>
+
+<p>Jacks = \(\frac{4}{52} \cdot \frac{3}{51} \cdot \frac{2}{50} \approx 0.0002\)</p>
+
+<h4 id="pan-ace-king-queen-in-order">P(An ace, king, queen in order)</h4>
+<p>\(P(A, K, Q) = \frac{4}{52} \cdot \frac{4}{51} \cdot \frac{4}{50}\)</p>
+
+<h4 id="pclub-spade-heart">P(Club, Spade, Heart)</h4>
+<p>\(P(C, S, H) = \frac{13}{52} \cdot \frac{13}{51} \cdot \frac{13}{50}\)</p>
+
+<h4 id="p3-clubs">P(3 clubs)</h4>
+
+<p>\(P(3 clubs) = \frac{13}{52} \cdot \frac{12}{51} \cdot \frac{11}{50}\)</p>
+
+<h3 id="box-1-contains-2-red-balls-and-1-blue-ball-box-2-contains-3-blue-balls-and-1-red-ball-a-coins-is-tossed-if-a-head-then-box-1-is-selected-and-a-bal-is-drawn-if-a-tail-box-2-is-selected-and-a-box-is-drawn-find-the-probability-of-selecting-a-red-ball">Box 1 contains 2 red balls and 1 blue ball. Box 2 contains 3 blue balls and 1 red ball. A coins is tossed. If a Head, then Box 1 is selected and a bal is drawn. If a tail, box 2 is selected and a box is drawn. Find the probability of selecting a red ball.</h3>
+
+<p>\(P(R) = P(H) \cdot P(R \mid H) + P(T) \cdot P(R \mid T)\)</p>
+
+<p>\(P(R \mid H) = \frac{2}{3}\)</p>
+
+<p>\(P(R \mid T) = \frac{1}{4}\)</p>
+
+<p>\(P(R) = \frac{1}{2} \cdot \frac{2}{3} + \frac{1}{2} \cdot \frac{1}{4}\)</p>
+
+<p>\(P(R) = \frac{11}{24} \approx 0.458\)</p>
+
+<h3 id="a-card-is-dawn-from-a-deck-of-cards-what-is-the-probability-that-the-card-is-a-club-given-that-it-is-a-king">A card is dawn from a deck of cards. What is the probability that the card is a Club given that it is a King</h3>
+
+<p>\(P(C) = \frac{13}{52}\)</p>
+
+<p>\(P(K) = \frac{4}{52}\)</p>
+
+<p>\(P(K \cap C) = \frac{1}{52}\)</p>
+
+<p>\(P(C \mid K) = \frac{P(K \cap C)}{P(K)}\)</p>
+
+<p>\(P(C \mid K) = \frac{\frac{1}{52}}{\frac{4}{52}} = \frac{1}{4}\)</p>
+
+<h3 id="given-2-events-a-and-b-pb-alone--01-pa-alone--02-pa-cup-bc--06-what-is-pa-mid-b">Given 2 events A and B. P(B) alone = 0.1, P(A) alone = 0.2, \(P(A \cup B)^c = 0.6\) What is \(P(A \mid B)\)</h3>
+
+<p>\(0.1 = P(B \cap A^c)\)</p>
+
+<p>\(0.2 = P(A \cap B^c)\)</p>
+
+<p>\(0.6 = P(A \cup B)^c\)</p>
+
+<p>\(P(A \cup B) = 1 - P(A \cup B)^c\)</p>
+
+<p>plug in values and we get</p>
+
+<p>\(P(A \cup B) = 0.4\)</p>
+
+<p>\(P(A \cup B) = P(A \cap B^c) + P(B \cap A^c) + P(A \cap B)\)</p>
+
+<p>plug in values and we get</p>
+
+<p>\(0.4 = 0.2 + 0.1 + P(A \cap B)\)</p>
+
+<p>\(P(A \cap B) = 0.1\)</p>
+
+<p>\(P(B) = P(B \cap A^c) + P(A \cap B)\)</p>
+
+<p>plug in values and we get</p>
+
+<p>\(P(B) = 0.1 + 0.1\)</p>
+
+<p>\(P(B) = 0.2\)</p>
+
+<p>\(P(A \mid B) = \frac{(A \cap B)}{P(B)}\)</p>
+
+<p>plug in values and we get</p>
+
+<p>\(P(A \mid B) = \frac{0.1}{0.2} = 0.5\)</p>
+
+<h3 id="a-bucket-has-5-white-chips-4-black-chips-3-red-chips-four-chips-are-drawn-sequentially-without-replacement-what-is-the-probability-of-the-sequence-w-r-w-b">A bucket has 5 white chips, 4 black chips, 3 red chips. Four chips are drawn sequentially without replacement. What is the probability of the sequence {W, R, W, B}</h3>
+<p>\(P(W_{1}) \cdot P(R_{2} \mid W_{1}) \cdot P(W_{3} \mid R_{2} \cap W_{1}) \cdot P(B_{4} \mid W_{3} \cap R_{2} \cap W_{1})\)</p>
+
+<p>\(\frac{5}{12} \cdot \frac{3}{11} \cdot \frac{4}{10} \cdot \frac{4}{9} \approx 0.02\)</p>
+
+<h3 id="example-9-a-person-selects-3-cards-from-a-deck-and-replaces-each-card-after-it-is-drawn-find-the-probability-that-the-person-will-get-at-least-1-heart">Example 9: A person selects 3 cards from a deck and replaces each card after it is drawn. Find the probability that the person will get AT LEAST 1 heart.</h3>
+
+<p># of hearts in deck: 13</p>
+
+<p>To calculate directly, we need to calcuate the probability of selecting 1 Heart, 2 Hearts, 3 Hearts then adding them together.</p>
+
+<p>“AT LEAST” means it’s the complement of 0 hearts</p>
+
+<p># of cards that are not hearts = \( 52 - 13 = 39\)</p>
+
+<p>so: try#1 = \(\frac{39}{52}\)</p>
+
+<p>so: try#2 = \(\frac{39}{52}\)</p>
+
+<p>so: try#3 = \(\frac{39}{52}\)</p>
+
+<p>\(\frac{39}{52} \cdot \frac{39}{52} \cdot \frac{39}{52} \approx 0.422\)</p>
+
+<h3 id="example-10-a-single-die-is-rolled-4-times-find-the-probability-of-getting-at-least-one-6">Example 10: A single die is rolled 4 times. Find the probability of getting at least one 6</h3>
+
+<p>let A = at least one 6 rolled</p>
+
+<p>let B = No 6’s rolled</p>
+
+<p>\(P(A) = 1 - P(B)\)</p>
+
+<p>\(P(B) = (\frac{5}{6})^4\)</p>
+
+<p>\(P(A) = 1 - (\frac{5}{6})^4 \approx .518\)</p>
+
+<h3 id="example-11-bucket-1-has-2-red-chips-and-4-white-chips-bucket-2-has-3-red-chips-and-1-white-chip-1-chip-is-drawn-from-bucket-1-and-moved-to-bucket-2-what-is-the-probability-that-a-chip-drawn-now-from-bucket-2-will-be-red">Example 11: Bucket 1 has 2 red chips and 4 white chips. Bucket 2 has 3 red chips and 1 white chip. 1 chip is drawn from bucket 1 and moved to bucket 2. What is the probability that a chip drawn now from bucket 2 will be red?</h3>
+
+<p>\(P(R_2) = P(R_1) \cdot P(R_2 \mid R_1) + P(W_1) \cdot P(R_2 \mid W_1)\)</p>
+
+<p>\(P(R_2) = \frac{2}{6} \cdot \frac{4}{5} + \frac{4}{6} \cdot \frac{3}{5} = \frac{20}{30} = \frac{2}{3}\)</p>
+
+<h3 id="example-12-a-deck-of-cards-is-shuffled-and-the-top-is-removed-what-is-the-probability-that-the-second-card-will-be-an-ace">Example 12: A deck of cards is shuffled and the top is removed. What is the probability that the second card will be an ace?</h3>
+
+<p>\(P(A_2) = P(A_1) \cdot P(A_2 \mid A_1) + P(A_1^c) \cdot P(A_2 \mid A_1^c)\)</p>
+
+<p>\(P(A_2) = \frac{4}{52} \cdot \frac{3}{51} + \frac{48}{52} \cdot \frac{4}{51} \approx 0.0769\)</p>
+
+<h3 id="example-14-a-biased-coin-is-tossed-once-it-is-twice-as-likely-to-come-up-heads-as-tails-if-heads-the-na-chip-is-drawn-from-bucket-1-3-white-4-red-if-tails-the-n-a-chip-is-drawn-from-bucket-2-6w-3r-given-that-a-white-chip-is-drawn-what-is-the-probability-that-the-coin-came-up-tails">Example 14: A biased coin is tossed once. It is twice as likely to come up heads as tails. If heads, the na chip is drawn from Bucket 1 (3 white, 4 red). If tails, the n a chip is drawn from Bucket 2 (6W, 3R). Given that a white chip is drawn, what is the probability that the coin came up tails?</h3>
+
+<p>work backwards from the answer to find the question</p>
+
+<p>biased coin: \(P(H) = \frac{2}{3}\)</p>
+
+<p>use Baye’s Theorem</p>
+
+<p>\(P(T \mid W) = \frac{P(W \mid T) \cdot P(T)}{P(W \mid T) + P(W \mid H) \cdot P(H)}\)</p>
+
+<p>plug in values</p>
+
+<p>\(\frac{\frac{6}{9} \cdot \frac{1}{3}}{\frac{6}{9} \cdot \frac{1}{3} + \frac{3}{7} \cdot \frac{2}{3}} = \frac{7}{16} \approx 0.4375\)</p>
