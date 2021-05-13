@@ -1,0 +1,190 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+<style>
+  body {
+    background-color: #ADD8E6;
+  }
+  h2 {
+    background-color: #FFFFFF;
+  }
+  h3 {
+    text-decoration:underline black;
+  }
+</style>
+
+<h1 id="class-4-notes-may-13">Class 4 Notes (May 13)</h1>
+
+<h2 id="definitions">Definitions</h2>
+
+<h3 id="independence">Independence</h3>
+<ul>
+  <li>
+    <p>Two events A and B are independent if the fact that A occurs does not efffect the probability of B occurring</p>
+  </li>
+  <li>
+    <p>Ex. roll a die and get a “6”, roll a second die and get a “3”</p>
+  </li>
+  <li>
+    <p>If A and B are independent, then \(P(A \cup B) = P(A) \cdot P(B)\)</p>
+  </li>
+  <li>
+    <p>If A and B are independent, then \(P(A \mid B) = P(A)\)</p>
+  </li>
+</ul>
+
+<h3 id="independence-and-complements">Independence and complements</h3>
+<ul>
+  <li>
+    <p>If A and B are independent, then \(A^c\) and \(B^c\) are independent</p>
+  </li>
+  <li>
+    <p>\(P(A^c \cup B^c) = P(A \cap B)^c\)</p>
+  </li>
+</ul>
+
+<h3 id="mutual-exclusion-does-not-imply-independence">Mutual Exclusion does not imply independence</h3>
+
+<ul>
+  <li>
+    <p>If A and B are mutually exclusive, then the \(P(A \cap B) = 0\)</p>
+  </li>
+  <li>
+    <p>Since \(P(A) \cdot P(B) &gt; 0\) the equality in definition of independence is not satisfied</p>
+  </li>
+</ul>
+
+<h3 id="independence-of-more-than-two-events-mutually-independent-events">Independence of more than two events (Mutually Independent Events)</h3>
+
+<ul>
+  <li>Events \(A_1, A_2, A_3, … A_n\) are independent if
+\(P(A_1 \cap A_2 \cap A_3 … \cap A_n) = P(A_1) \cdot P(A_2) \cdot P(A_3) … \cdot P(A_n)\)</li>
+</ul>
+
+<h3 id="multiplication-rule">Multiplication rule:</h3>
+<ul>
+  <li>
+    <p>If operation A can be done in M different ways, and operation B can be done in n different ways, then the sequence (op A, op B) can be done in m * n different ways.</p>
+  </li>
+  <li>
+    <p>“and” means to multiply, in a sequence of possibilities</p>
+  </li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="a-coin-is-flipped-and-a-die-is-rolled-find-the-probability-of-getting-a-head-on-the-coin-and-a-4-on-the-die">A coin is flipped and a die is rolled. Find the probability of getting a Head on the coin and a 4 on the die</h3>
+
+<p>Sample space for die: \(S = {1, 2, 3, 4, 5, 6}\)</p>
+
+<p>Sample space for coin: \(S = {H, T}\)</p>
+
+<p>\(P(H \cup 4) = P(H) \cdot P(4) = \frac{1}{2} \cdot \frac{1
+}{6} =\frac{1}{12}\)</p>
+
+<h3 id="example-2-a-card-is-drawn-from-a-deck-then-is-replaced-a-second-card-is-drawn-find-the-probability-of-getting-a-king-then-a-7">Example 2: A card is drawn from a deck then is replaced. A second card is drawn. Find the probability of getting a King then a 7.</h3>
+
+<p>num. kings = 4</p>
+
+<p>num. 7s = 4</p>
+
+<p>\(P(K) = \frac{4}{52}\)</p>
+
+<p>\(P(7) = \frac{4}{52}\)</p>
+
+<p>\(P(K_1 \cap 7_2) = P(K) \cdot P(7) = \frac{4}{52} \cdot \frac{4}{52} \approx 0.006\)</p>
+
+<h3 id="example-3-event-a-is-defined-as-drawing-a-king-from-a-deck-of-cards-event-b-is-defined-as-drawing-a-diamond-what-is-the-probability-of-drawing-a-king-of-diamonds">Example 3: Event A is defined as drawing a King from a deck of cards. Event B is defined as drawing a Diamond. What is the probability of drawing a King of Diamonds?</h3>
+
+<p>\(P(K \cap D) - P(K) \cdot P(D)\)</p>
+
+<p>\(P(K \cap D) = \frac{4}{52} \cdot \frac{13}{52}\)</p>
+
+<h3 id="example-4-a-bucket-contains-2-red-balls-5-blue-balls-3-white-balls-a-ball-is-selected-and-its-color-noted-then-it-is-returned-to-the-bucket-find-the-probabiltiy-of-each">Example 4: A bucket contains 2 Red balls, 5 Blue balls, 3 White balls. A ball is selected and its color noted, then it is returned to the bucket. Find the probabiltiy of each:</h3>
+
+<h4 id="selecting-3-blue-balls-with-replacement">Selecting 3 blue balls with replacement</h4>
+<p>\(P(B \cap B \cap B) = P(B) \cdot P(B) \cdot P(B) = \frac{5}{10} \cdot \frac{5}{10} \cdot \frac{5}{10} = 0.125\)</p>
+
+<h4 id="selecting-1-white-ball-then-1-red-ball">Selecting 1 White ball then 1 red ball.</h4>
+<p>\(P(W \cap R) = P(W) \cdot P(R) = \frac{3}{10} \cdot \frac{2}{10} = 0.06\)</p>
+
+<h4 id="selecting-2-blue-balls-then-1-white-ball">Selecting 2 Blue balls then 1 White ball</h4>
+<p>\(P(B \cap B \cap W) = P(B) \cdot P(B) \cdot P(W)\)</p>
+
+<h3 id="example-5-an-insurance-company-wnats-to-assess-future-liabilities-of-3-clients-each-from-a-particular-state-alaska-missouri-vermont-each-person-has-the-following-chances-of-surviving-the-next-5-years-pa--07-pm--09-pv--03-what-is-the-probability-that-by-the-end-of-5-years-the-insurance-company-will-have-to-pay-death-beneifits-to-exactly-one-of--the-three-people">Example 5: An insurance company wnats to assess future liabilities of 3 clients, each from a particular state: Alaska, Missouri, Vermont). Each person has the following chances of surviving the next 5 years: P(A) = 0.7, P(M) = 0.9, P(V) = 0.3. What is the probability that by the end of 5 years, the insurance company will have to pay death beneifits to exactly one of  the three people?</h3>
+
+<ul>
+  <li>
+    <p>Probability only Alaska dies: \(P(A^c \cap M \cap V)\)</p>
+  </li>
+  <li>
+    <p>Probabiltity only Missouri dies: \(P(A \cap M^c \cap V)\)</p>
+  </li>
+  <li>
+    <p>Probability only Vermont dies: \(P(A \cap M \cap V^c)\)</p>
+  </li>
+  <li>
+    <p>Probabability exactly 1 dies: \(P(A^c \cap M \cap V) \cup P(A \cap M^c \cap V) \cup  P(A \cap M \cap V^c)\)</p>
+  </li>
+  <li>
+    <p>Result: multiply and sum</p>
+  </li>
+  <li>
+    <p>\((0.3 \cdot 0.9 \cdot 0.3) + (0.7 \cdot 0.1 \cdot 0.3) + (0.7 \cdot 0.9 \cdot 0.7)\)</p>
+  </li>
+</ul>
+
+<h3 id="example-6-game-of-craps-using-2-dice-you-win-by-rolling-a-sum-of-4-5-6-8-9-10-twice-before-rolling-a-sum-of-7-what-is-the-probability-a-player-wins-with-a-point-of-10">Example 6: Game of Craps: Using 2 dice, you win by rolling a sum of 4, 5, 6, 8, 9, 10 twice before rolling a sum of 7. What is the probability a player wins with a point of 10?</h3>
+
+<p>Ways to sum to 10: \({(4,6), (5,5), (6,4)}\)</p>
+
+<p>Ways to sum to 7: \({(6,1), (5,2), (4,3), (3,4), (2,5), (1,6)}\)</p>
+
+<p>Since all sequences are mutually exclusive, probability of winning a point 10 is the sum of the infitine number of products</p>
+
+<p>\(\sum_{k=0}^{\infty} \frac{3}{36} \cdot \frac{3}{36} \cdot (\frac{27}{36})^k\)</p>
+
+<p>This is a convergent geometic series</p>
+
+<p>\(\frac{3}{36} \cdot \frac{3}{36} \cdot \frac{1}{1-\frac{27}{36}} = \frac{1}{36}\)</p>
+
+<p>Do this math for all possible points. Player wins by rolinga sum of 7 or 11 on first roll, or by getting 4, 5, 6, 8, 9, 10 on first roll and making a point.</p>
+
+<p>Probability that the player wins is the sum of all possibilities (Probability of 7 or 11 on first, and probability of each point).</p>
+
+<h3 id="example-1-braille-is-a-tactile-representation-of-sounds-and-words-is-a-set-of-6-dots-in-a-group-that-are-raised-off-a-page-to-create-a-texuture-with-combinations-of-raisenot-raise-a-number-of-characters-can-be-represented-how-many-characters-can-be-represented-in-braille">Example 1: Braille is a tactile representation of sounds and words, is a set of 6 dots in a group that are raised off a page to create a texuture. With combinations of raise/not raise, a number of characters can be represented. How many characters can be represented in braille?</h3>
+
+<p>2 options for each space, raised or not rasied.</p>
+
+<p>\(2^6 = 64\)</p>
+
+<p>Since one possibility is not raising all 6 spaces and this is essentially meaningless, Braille has 63 total workable possibilities.</p>
+
+<h3 id="example-3-encoding-of-zip-codes-is-5-digits--4-digits-total-of-9-each-digit-can-be-a-number-in--the-range-0-9-na--number-of-zip-codes-with-at-least-one-7-in-the-first-5-spaces-nb--number-of-zip-codes-with-at-least-one-7-in-the-second-5-spaces-nt-is-the-number-of-all-possible-9-digit-zip-codes">Example 3: Encoding of Zip codes is 5 digits + 4 digits, total of 9. Each digit can be a number in  the range 0-9. N(A) = number of zip codes with at least one 7 in the first 5 spaces. N(B) = Number of zip codes with at least one 7 in the second 5 spaces. N(T) is the number of all possible 9 digit zip codes.</h3>
+
+<h4 id="find-nt-na-na-cap-b-na-cup-b">Find \(N(T), N(A), N(A \cap B) N(A \cup B)\)</h4>
+
+<p>\(N(T) = 10^9\)</p>
+
+<p>\(N(T) - N(A^c) = N(A)\)</p>
+
+<p>\(N(A) = 10^9 - 9^5 \cdot 10^4 \)</p>
+
+<p>\(N(T) - N(B^c) = N(B)\)</p>
+
+<p>\(N(B) = 10^9 - 10^5 \cdot 9^4\)</p>
+
+<p>\(N(A \cap B) = (10^5 -9^5) \cdot (10^4 - 9^4)\)</p>
+
+<p>\(N(A \cup B) = (10^9 - 9^5 \cdot 10^5) + (10^9 - 10^5 \cdot 9^4) - [(10^5 - 9^5) \cdot (10^4 - 9^4)]\)</p>
+
+<h3 id="example-3-tossing-a-coin-and-rolling-a-die-find-the-number-of-outcomes-for-this-sequence-of-events">Example 3: Tossing a coin and rolling a die. Find the number of outcomes for this sequence of events</h3>
+<p>\(2 \cdot 6 = 12\)</p>
+
+<h3 id="example-4-a-manuracturer-makes-several-types-of-paint-with-7-colors-2-types-3-textures-and-2-uses-how-many-different-types-of-paint-can-you-make">Example 4: A manuracturer makes several types of paint with 7 colors, 2 types, 3 textures and 2 uses. How many different types of paint can you make?</h3>
+<p>\(7 \cdot 2 \cdot 3 \cdot 3 \cdot 2 = 84\)</p>
+
+<h3 id="example-5-if-we-have-license-plates-with-4-digits-how-many-license-plates-can-you-make-if-repititions-of-numbers-are-allowed-no-reptititions">Example 5: If we have license plates with 4 digits, How many license plates can you make if repititions of numbers are allowed? No reptititions?</h3>
+
+<p>reptitions: \(10^4 = 10,000\)</p>
+
+<p>no repitions: \(10 \cdot 9 \cdot 8 \cdot 7 = 5040\)</p>
