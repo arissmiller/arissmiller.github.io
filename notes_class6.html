@@ -12,185 +12,148 @@
   }
 </style>
 
-<h1 id="class-8-notes-may-20">Class 8 Notes, May 20</h1>
+<h1 id="class-6-notes-may-18">Class 6 Notes (May 18)</h1>
 
 <h2 id="definitions">Definitions</h2>
 
-<h3 id="variance">Variance</h3>
+<h3 id="probability-distribution">Probability Distribution:</h3>
 
 <ul>
   <li>
-    <p>Written as \(\sigma^2\), var(x)</p>
+    <p>List of probabilities associated with each of it’s possible outcomes</p>
   </li>
   <li>
-    <p>The variance of a random variable X, is the spread, or variability of the distribution.</p>
-  </li>
-  <li>
-    <p>Discrete Random variable: \(\sigma^2 = E[(x - \mu)^2] = \sum_{0}^{k}(x_k - \mu)^2 P(x) = E(x^2) - [E(x)]^2\)</p>
-  </li>
-  <li>
-    <p>Continuous Random Variable: \(\sigma^2 = E[(y-\mu)^2] = \int_{-\infty}^{\infty}(y-\mu)^2 f(y) dy = E(y^2) - [E(y)]^2\)</p>
-  </li>
-  <li>
-    <p>If \(E(X^2)\) or \(E(Y^2)\) is not finite, then the variance is undefined</p>
+    <p>for discrete random variables, the probability distribution is called “probability mass function” or “probability density function”</p>
   </li>
 </ul>
 
-<h3 id="properties-of-meanvariance">Properties of mean/variance</h3>
-
-<ol>
-  <li>
-    <p>E(ax + b) = aE(x) + b, Var(ax+b) = a^2 Var(x)</p>
-  </li>
-  <li>
-    <p>The mean of the sum of two independent random variables x + y is the sum of thier means.</p>
-  </li>
-</ol>
-
-<h3 id="moment">Moment:</h3>
+<h3 id="assigning-probabilities-in-discrete-cases">Assigning Probabilities in discrete cases:</h3>
 
 <ul>
   <li>
-    <p>A quantitative measure of the shape of our function</p>
-
-    <ul>
-      <li>0th moment = total proabability</li>
-      <li>1st moment = Mean</li>
-      <li>2nd moment = variance</li>
-      <li>3rd moment = skewness: long tail? in pos or neg direction?</li>
-      <li>4th moment = flatness (kurtosis) flat looking/peaky?</li>
-    </ul>
+    <p>Number of points in  S is finite or countably infinite</p>
   </li>
+  <li>
+    <p>p(s) = probability function</p>
+  </li>
+  <li>
+    <p>Random variable X may take k different values</p>
+  </li>
+  <li>
+    <p>The probability that \(X = x_i\) is defined as \(P(X=x_i) = P_i\)</p>
+  </li>
+  <li>
+    <p>The probabilities, \(P_i\), must satisfy the following:</p>
+  </li>
+  <li>\(0 \leq P_i \leq 1\) for each i</li>
+  <li>\(p_1 + p_2 + … + P_k = 1\)</li>
+</ul>
+
+<h3 id="probability-massdensity-function-pdf">Probability Mass/Density Function (pdf)</h3>
+
+<p>\(P_x(k) = P(X =k) = P(x \in S \mid x(s) = k)\)</p>
+
+<p>\(P_x(k) = 0\) for any value of k not within range of X\)</p>
+
+<h3 id="cumulative-distribution-function-cdf">Cumulative Distribution function: (cdf)</h3>
+
+<ul>
+  <li>A function giving the probability that the random variable X is less than or equal to k, i.e. sum up all of the probabilities for \(x \leq k\)</li>
 </ul>
 
 <h2 id="examples">Examples</h2>
 
-<h3 id="example-1-give-na-random-variable-x-discete-and-its-associated-probability-mass-function-find-the-mean-and-variance">Example 1: Give na random variable X (discete) and its associated probability mass function, find the mean and variance</h3>
+<h3 id="example-1-given-an-unfair-dice-where-the-probability-of-getting-a-1-or-6-is-higher-x--the-random-face-of-the-die-so-px1--14--px6-all-other-sides-have-a-probability-of-18-what-is-the-probabillity-that-an-even-number-shows-after-a-roll-of-the-die">Example 1: Given an unfair dice, where the probability of getting a 1 or 6 is higher. X = the random face of the die. So P(X=1) = 1/4 = P(X=6). All other sides have a probability of 1/8. What is the probabillity that an even number shows after a roll of the die?</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>x</th>
-      <th>\(P_x(x)\)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>1/8</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>1/4</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>3/8</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>1/4</td>
-    </tr>
-  </tbody>
-</table>
+<p>This is a discrete probability function. It is finite and all probabilities add up to 1.</p>
 
-<p>\(\mu = E(X) = \sum_{k=0}^{3}X_k P_x(k) = 1.75\)</p>
+<p>Even number = {2, 4, 6}</p>
 
-<p>\(\sigma^2 = E(X-\mu)^2 = \sum_{k=0}^{3}(X_k - \mu)^2P_x(k) = 0.9375 = \sigma^2\)</p>
+<p>\(P(X=Even) = P(X=2) + P(X=4) + P(X=6)\)</p>
 
-<h3 id="example-2-if-you-toss-a-6-sided-die-the-probability-mass-function-is-uniform-what-are-the-mean-and-variance">Example 2: If you toss a 6 sided die, the probability mass function is uniform. What are the mean and variance?</h3>
+<p>\(\frac{1}{8} + \frac{1}{8} + \frac{1}{4}\)</p>
 
-<p>\(\mu = E(x) = \sum_{k=1}^{6}XP_X(k) = \frac{21}{6} \approx 3.5\)</p>
+<h3 id="example-2-suppose-a-variable-x-can-take-on-values-1-2-3-4-the-probabilities-associated-with-each-outccome-are-1-01-2-03-304-402">Example 2: Suppose a variable X can take on values 1, 2, 3, 4. The probabilities associated with each outccome are: 1: 0.1, 2: 0.3. 3:0.4, 4:0.2</h3>
 
-<p>\(\sigma^2 = E(X^2) - [E(x)]^2 = \sum_{k=1}^{6}X^2P_x(k) - (3.5)^2 = 2.916\)</p>
+<h4 id="a-what-is-the-probability-that-x--2-or-x--3">a. What is the probability that X = 2 or X = 3</h4>
 
-<h3 id="example-3-from-a-previous-example-give-nthe-continuous-random-variable-x-with-pdf-fx--ex2-0-lt-x-lt-1-what-are-the-mean-and-variance">Example 3: From a previous example, give nthe continuous random variable X with pdf \(f(x) = ex^2 0 \lt x \lt 1\) what are the mean and variance?</h3>
+<p>0.3 + 0.4 = 0.7</p>
 
-<p>\(\mu = E(x) = \frac{3}{4}\)</p>
+<h4 id="b-what-is-the-probability-that-x--1">b. What is the probability that X &gt; 1</h4>
+<p>1 - 00.1 = -0.9</p>
 
-<p>\(\sigma^2 = E(x^2) - [E(x)^2] = \int_0^1(x^2)(3x^2)dx = \frac{3}{5}\)</p>
+<h4 id="c-draw-a-probability-histogram">c. Draw a probability histogram</h4>
 
-<p>\(\sigma^2 = \frac{3}{5} - \frac{3}{4}^2 \approx 0.0375\)</p>
+<h3 id="example-3-a-fair-coin-is-tossed-until-a-head-comes-up-the-first-time-what-are-the-chances-of-that-happening-on-and-odd-numbered-toss">Example 3: A fair coin is tossed until a head comes up the first time. What are the chances of that happening on and odd numbered toss?</h3>
 
-<h3 id="example-4-given-the-probability-density-function-for-a-continuous-random-variable-x-fx--p--1xp-0-leq-x-leq-1-what-are-the-mean-and-variance">Example 4: Given the probability density function for a continuous random variable X: \(f(x) = (p + 1)x^p 0 \leq x \leq 1\). What are the mean and variance?</h3>
+<p>Sample space is countably infinite.</p>
 
-<p>\(E(x) = \int_0^1 x(p+1)x^p dx = (p+1)\int_0^1 x^p+1 dx = \frac{p+1}{p+2} \)</p>
+<p>{H, TH, TTH, TTTH, TTTTH, … }</p>
 
-<p>\(Var(x) = E(x^2) - [E(x)]^2 = \int_0^1 x^2 (p+1)x^p dx - [E(x)]^2 = \frac{p+1}{p+3} - [\frac{p+1}{p+2}]^2\)</p>
+<p>We need a pattern to describe this.</p>
 
-<h3 id="example-5-given-a-casino-gambling-game-where-the-outcomes-and-probabilities-are-like-this-find-the-mean-and-variance">Example 5: Given a casino gambling game, where the outcomes and probabilities are like this, find the mean and variance</h3>
+<p>\(P(H) = \frac{1}{2}\)
+\(P(T) = \frac{1}{2}\)</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>Outcome</td>
-      <td>—</td>
-      <td>-$1.00</td>
-      <td>$0.00</td>
-      <td>$3.00</td>
-      <td>$5.00</td>
-    </tr>
-    <tr>
-      <td>Probability</td>
-      <td>—</td>
-      <td>0.3</td>
-      <td>0.4</td>
-      <td>0.2</td>
-      <td>0.1</td>
-    </tr>
-  </tbody>
-</table>
+<p>k = toss #</p>
 
-<p>\(E(x) = 0.80\)</p>
+<p>\(\{ \frac{1}{2}, \frac{1}{2} \cdot \frac{1}{2}, \frac{1}{2} \cdot \frac{1}{2} \cdot \frac{1}{2} … \}\)</p>
 
-<p>\(Var(x) = 3.96\)</p>
+<p>P(X = oddnumber) = P(X=1) + P(X =3) + P(X=5) + …</p>
 
-<h4 id="the-caisno-adjusts-the-payout-by-subtracting-100-from-each-prize-resulting-in-a-new-probability-mass-function">The caisno adjusts the payout by subtracting $1.00 from each prize ,resulting in a new probability mass function:</h4>
+<p>\(\sum^{\infty}_{k=0} (\frac{1}{2})^{2k + 1}\)</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>Outcome</td>
-      <td>—</td>
-      <td>-$2.00</td>
-      <td>-$1.00</td>
-      <td>$2.00</td>
-      <td>$4.00</td>
-    </tr>
-    <tr>
-      <td>probability</td>
-      <td>—</td>
-      <td>0.3</td>
-      <td>0.4</td>
-      <td>0.2</td>
-      <td>0.1</td>
-    </tr>
-  </tbody>
-</table>
+<p>\(\sum^{\infty}_{k=0} \frac{1}{2} \cdot (\frac{1}{4})^k\)</p>
 
-<p>\(E(X) = -0.20\)</p>
+<p>This is a geometric series that converges, we can solve it</p>
 
-<p>\(Var(x) = 3.96\)</p>
+<p>sum = \(\frac{a}{1-r} = \frac{\frac{1}{2}}{1 - \frac{1}{4}} = \frac{2}{3}\)</p>
 
-<h4 id="the-casino-does-not-have-an-impressive-nough-prize-with-the-lowered-payouts-so-they-double-all-the-prizes">The casino does not have an impressive nough prize with the lowered payouts, so they double all the prizes</h4>
-<p>|Outcome|—| -$4.00| -$2.00 | $4.00 | $8.00|
-|probability|—| 0.3|0.4|0.2|0.1|</p>
+<h3 id="example-4-if-you-are-tossing-two-fair-dice-and-i--face-of-die-1-and-j-face-of-die-2-and-x-is-the-random-variable-for-their-sum">Example 4: If you are tossing two fair dice and i = face of die 1, and j= face of die 2, and X is the random variable for their sum</h3>
 
-<p>\(E(x) = -0.40\) (previous expected value times 2)</p>
+<h4 id="a-what-is-the-smaple-space-s">a. What is the smaple space, S?</h4>
+<p>\(X(i,j) = i + j \)</p>
 
-<p>\(Var(x) = 15.84\) (2^2 times previous variance)</p>
+<p>\(X  = X_1 + X_2\)</p>
 
-<h3 id="example-6-given-a-continuous-random-variable-y-with-pdf-fy--2y-0-leq-y-leq-1-what-is-the-standard-deviation-of-3y-2">Example 6: Given a continuous random variable Y with pdf \(f(y) = 2y; 0 \leq y \leq 1\) What is the standard deviation of (3Y +2)</h3>
+<p>Sample Space = \(S = \{(i,j) \mid i = 1,2,3,4,5,6; j = 1,2,3,4,5,6\}\)</p>
 
-<p>standard deviation = sqrt(variance)</p>
+<p>Sum = \(i + j = \{2,3,4,5,6,7,8,9,10,11,12\}\)</p>
 
-<p>\(E(y) = \int_0^1 y(2y)dy = \frac{2}{3}\)</p>
+<h4 id="b-if-k--particular-distance-of-this-sum-what-is-the-probability-that-x--k">b. If k = particular distance of this sum, what is the probability that X = k</h4>
 
-<p>\(E(y^2) = \int_0^1 y^2(2y)dy = \frac{1}{2}\)</p>
+<h4 id="c-draw-a-probability-density-function">c. Draw a probability density function.</h4>
 
-<p>\(Var(y) = \sigma^2 = E(y^2) - [E(y)]^2 = \frac{1}{18}\)</p>
+<h3 id="example-5-give-n-the-previous-example-what-is-the-cumulative-distriution-function-draw-a-plot">Example 5: Give n the previous example, what is the Cumulative Distriution Function? Draw a plot.</h3>
 
-<p>\(Var(3y + 2) = 3^2(Var(y) = \frac{1}{2}\)</p>
+<h3 id="urn-1-and-urn-2-each-have-2-red-chips-and-2-white-chips-two-chips-are-drawn-simultaneously-from-each-urn-let-x1-be-the-number-of-red-chips-in-the-first-sample-and-x2-be-the-number-of-red-chips-in-the-second-sample-find-the-pdf-of-x1--x2">Urn 1 and Urn 2 each have 2 red chips and 2 White chips. Two chips are drawn simultaneously from each urn. Let X1 be the number of Red chips in the first sample and X2 be the number of REd chips in the second sample. Find the Pdf of X1 + X2</h3>
 
-<p>\(\sigma = \sqrt{\frac{1}{2}} \approx 0.707\)</p>
+<p>\(P(X_1 = 1) = \frac{2}{3}\)</p>
 
+<p>\(P(X_1 = 2) = \frac{2}{12}\)</p>
+
+<p>\(P(X_1 = 0) = \frac{2}{12}\)</p>
+
+<p>\(P(X_2 = 0) = \frac{2}{12}\)</p>
+
+<p>\(P(X_2 = 1) = \frac{2}{3}\)</p>
+
+<p>\(P(X_2 = 2) = \frac{2}{12}\)</p>
+
+<p>\(X = X_1 + x_2\)</p>
+
+<h3 id="example-1-given-the-pdf-fx--3x2-0-lt-x-lt1">Example 1: Given the pdf \(f(x) = 3x^2 0 \lt x \lt1\)</h3>
+
+<h4 id="a-what-is-p-frac12-lt-x-lt-1">a. What is \(P( \frac{1}{2} \lt x \lt 1)</h4>
+
+<p>\(\int_{\frac{1}{2}}^{1} 3x^2 dx = \frac{1}{8}\)</p>
+
+<h4 id="b-what-is-the-cmulative-distribution-function">b. What is the cmulative distribution function?</h4>
+
+<p>indefinite integral of the pdf
+\(x^3\)</p>
+
+<h4 id="c-what-is-px--frac12">c. What is \(P(X) = \frac{1}{2})\)</h4>
+<p>\(\int_{\frac{1}{2}}^{\frac{1}{2}} = 0\)</p>
+
+<p>Since this equals 0, we have to pick a range around 0.5, such as 0.49 to 0.51</p>
