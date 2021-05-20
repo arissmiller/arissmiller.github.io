@@ -1,0 +1,135 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+<style>
+  body {
+    background-color: #ADD8E6;
+  }
+  h2 {
+    background-color: #FFFFFF;
+  }
+  h3 {
+    text-decoration:underline black;
+  }
+</style>
+
+<h1 id="class-7-notes-may-19">Class 7 Notes (May 19)</h1>
+
+<h2 id="definitions">Definitions</h2>
+
+<h3 id="expected-value">Expected Value</h3>
+<ul>
+  <li>Weighted average of the possible values a random variable can take</li>
+  <li>Each outcome is weighted by it’s particular probability
+ \(\mu, E(x)\)</li>
+  <li>for a discrete random variable, \(E(x) = \sum_{i=1}^k x_ip_i\)</li>
+  <li>for a continuous random variable: \(E(x) = \int_{-\infty}^{\infty} f(x)dx\)</li>
+  <li>Long run average of the ranom variable, expected value over many observations</li>
+</ul>
+
+<h3 id="central-tendency">Central tendency</h3>
+
+<p>Most values of Px(k) and Fx(x) will focus near the mean</p>
+
+<p>looks like a bell curve</p>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="example-2-x-is-a-continusous-random-variable-whose-probability-density-function-is">Example 2: X is a continusous random variable whose probability density function is</h3>
+
+<p>\(f(x) = \frac{x^3}{4} 0 \lt x \lt C\)</p>
+
+<h4 id="what-value-of-c-will-make-fx-a-probability-density-function">What value of C will make f(x) a probability density function?</h4>
+
+<p>\( \int_a^c \frac{x^3}{4}dx = 1 \to \frac{x^4}{4} \cdot \frac{1}{4}\vert_0^c \to C=2\)</p>
+
+<h4 id="what-is-the-cumulative-distribution-function">What is the cumulative distribution function?</h4>
+
+<p>\(pdf = f(x) = \frac{x^3}{4} 0 \lt C \lt 2\)</p>
+
+<p>\(F(x) = 0 x \leq 0, \frac{x^4}{16} 1, 0 \lt x \lt 2, x \geq 2\)</p>
+
+<h3 id="example-3-given-that-fx-is-a-probability-density-functionpdf-of-a-continuous-random-variable-x-find-and-graph-the-cumulative-distribution-function">Example 3: Given that f(x) is a probability density function(pdf) of a continuous random variable X, find and graph the cumulative distribution function.</h3>
+
+<p>\(f(x) = x + 1 -1 \lt x \lt 0, 1 -x 0 \leq x \lt 1\)</p>
+
+<p>4 intervals. Integrate each interval.</p>
+
+<h3 id="given-the-pdf-described-by-the-piecewise-function">given the pdf described by the piecewise function:</h3>
+
+<p>\(f(x) = 2 - 4x 0 \leq x \lt \frac{1}{2}, 4x-2 \frac{1}{2} \leq x \leq 1\)</p>
+
+<h4 id="is-theis-a-valid-pdf">Is theis a valid pdf?</h4>
+
+<p>All the values are positive \(0 \leq x \leq 1\)</p>
+
+<p>Values (area under curve) must sum up to 1.</p>
+
+<p>\(\int_0^{\frac{1}{2}} 2-4xdx + \int_{\frac{1}{2}}^1 4x-2dx = 1\)</p>
+
+<h4 id="what-is-the-probability-x-is-between-0-and-23">What is the probability X is between 0 and 2/3?</h4>
+
+<p>\(P(0 \lt X \lt \frac{2}{3})\)</p>
+
+<p>take integrals 0, 1/2, 1/2 to 2/3 and add them up</p>
+
+<p>get 5/9</p>
+
+<h4 id="what-is--the-cdf">What is  the cdf?</h4>
+
+<p>take integral for each interval and plot result</p>
+
+<h3 id="given-the-following-gambling-game-on-each-play-the-outcome-and-probability-are-as-followed-what-is-the-expected-outcome">Given the following gambling game, on each play, the outcome and probability are as followed. What is the expected outcome?</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Outcome</th>
+      <th>Probabilty</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lose $1.00</td>
+      <td>0.3</td>
+    </tr>
+    <tr>
+      <td>Break even</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <td>Win $3.00</td>
+      <td>0.2</td>
+    </tr>
+    <tr>
+      <td>Win $10</td>
+      <td>0.1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Mean outcome: \(-1.00)(0.3) + (0)(0.4) + (3.00)(0.2) + (10.00)(0.1) = $1.30\)</p>
+
+<p>In the long run the layer can expect to win $1.30 by playing.</p>
+
+<h3 id="example-2-given-a-roulette-game-39-numbers-on-the-wheel-you-wind-1-if-you-land-on-an-odd-number-you-lose-1-if-you-land-on-an-even-number-what-are-the-expected-winnings">Example 2: given a Roulette game, 39 numbers on the wheel. You wind $1 if you land on an odd number, you lose $1 if you land on an even number. What are the expected winnings?</h3>
+
+<p>\(Px(1) = P(x=1) = \frac{18}{38} = \frac{9}{19} win\)
+\(Px(-1) = P(x =-1) = \frac{20}{38} = \frac{10}{19} lose\)</p>
+
+<p>Expected winnings:</p>
+
+<p>\( E(x) = $1.00 \cdot \frac{9}{19} + -$1.00 * \frac{10}{19} = - $0.053.\)</p>
+
+<h3 id="example-3-given-that-x-is-a-binomial-random-variable-where-p59-n3-what-is-ex">Example 3: Given that X is a binomial random variable, where p=5/9, n=3, what is E(x)?</h3>
+
+<h3 id="example-4-a-bucket-has-9-chips-5-red-4-white-three-chips-are-drawn-without-replacement-x--number-of-red-chips-find-ex">Example 4: A bucket has 9 chips. 5 Red, 4 White. Three chips are drawn without replacement. X = number of red chips. Find E(x)</h3>
+
+<h3 id="example-5-given-xis-a-continuous-random-variable-with-pdf-below-find-ex">Example 5: Given Xis a continuous random variable with PDF below, find E(X)</h3>
+
+<p>\(f(x) = 3x^2; 0 \lt x \lt 1)\)</p>
+
+<h3 id="example-6-given-that-x-is-a-continuous-random-variable-with-pdf-below-find-ex">Example 6: Given that X is a continuous random variable with pdf below, find E(x)</h3>
+
+<p>\(f(x) = xe^{-x}; 0 \lt x \lt \inf\)</p>
+
+<h3 id="example-7-uf-a-lightbulb-has-an-average-lifeteime-of-1000-hrs-before-failure-is-it-reasonable-to-assume-each-bulb-will-last-for-1000-hrs-we-have-a-continuous-pdf-that-models-the-length-of-time-the-bulb-works-find-the-median-lifetime-of-the-bulb">Example 7: Uf a lightbulb has an average lifeteime of 1000 hrs before failure, is it reasonable to assume each bulb will last for 1000 hrs? We have a continuous PDF that models the length of time the bulb works. Find the median lifetime of the bulb.</h3>
