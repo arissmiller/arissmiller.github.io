@@ -1,0 +1,450 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+<style>
+  body {
+    background-color: #ADD8E6;
+  }
+  h2 {
+    background-color: #FFFFFF;
+  }
+  h3 {
+    text-decoration:underline black;
+  }
+</style>
+
+<h1 id="class--9-524">Class  9: 5/24</h1>
+
+<h2 id="definitions">Definitions</h2>
+
+<h3 id="joint-densities">Joint Densities:</h3>
+
+<ul>
+  <li>
+    <p>Interaction of multiple variables in a given system</p>
+  </li>
+  <li>
+    <p>For discrete random variables</p>
+
+    <ul>
+      <li>Range: all possible values that x and y can take</li>
+      <li>Joint probability mass function:
+        <ul>
+          <li>\(h(x,y) = P(X=x, Y=y) = h(x_i, y_i) = P(X=x_i, Y=y_i)\)</li>
+          <li>\(h(x_i, y_i) \geq 0\)</li>
+          <li>\(\sum_{i=1}^{n} \sum_{j=1}^{m} h(x_i, y_i) = 1\)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>For continuous random variables:
+    <ul>
+      <li>\(f_{x,y}(x, y) \geq 0\) for all x and y</li>
+      <li>\(\int_{-\infty}^{\infty}\int_{-infty}^{infty}f_{x,y}dxdy = 1\)</li>
+      <li>domain is defined to be where the joing pdf is non 0, assumed to be 0 else where
+###Marginal Distrubtions:</li>
+    </ul>
+  </li>
+  <li>Probability mass function of each random variable x and y</li>
+  <li>For the random variable x, \(f(x_i) = \sum_{j=1}^{m} h(x_i, y_j)\)</li>
+  <li>
+    <p>For the random variable y, \(f(y_i) = \sum_{i=1}^{n} h(x_i, y_j)\)</p>
+  </li>
+  <li>For continuous random variables:
+    <ul>
+      <li>\(f_x(x) = \int_{-\infty}^{\infty}f_{x,y}(x,y) dy\) for all x\</li>
+      <li>\(f_y(y) = \int_{-\infty}^{\infty} f(_{x,y}(x,y) dx\)for all y</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="example-1-there-are-2-random-varialbes-x-and-y-with-joing-probability-mass-function">Example 1: there are 2 random varialbes X and Y with joing probability mass function.</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td>Y=0</td>
+      <td>Y=1</td>
+      <td>Y=2</td>
+    </tr>
+    <tr>
+      <td>X=0</td>
+      <td>1/6</td>
+      <td>1/4</td>
+      <td>1/8</td>
+    </tr>
+    <tr>
+      <td>X=1</td>
+      <td>1/8</td>
+      <td>1/6</td>
+      <td>1/6</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="a-find-px0-y--1">a. find P(X=0, Y &lt;= 1)</h4>
+
+<p>\(P(X=0, Y=0)+ P(X=0, Y=1) = \frac{5}{12}\)</p>
+
+<h4 id="b-find-the-marginal-pmfs-of-x-and-y">b. find the marginal PMFs of x and Y</h4>
+
+<p>sum probabilites for each value of x and y</p>
+
+<p>\(P_x(1) = \frac{1}{8} + \frac{1}{6} + \frac{1}{6} = \frac{11}{24}\)</p>
+
+<p>Px(x) = 13/24 when x=0, 11/24 when x= 1, 0 otherwise</p>
+
+<p>Py(y) = 7/24 when y = 0,</p>
+
+<h4 id="c-py--1-x-0">c. P(Y = 1| X =0)</h4>
+
+<p>\(\frac{P(X=0, Y =1)}{P(X=0)} = \frac{Pxy(0,1)}{Px(0)} = \frac{6}{13}\)</p>
+
+<h4 id="d-are-x-and-y-independent">d. are X and Y independent?</h4>
+
+<p>need to check P(X=Xi, Y=yi - P(X-xi) * P(Y=yi) for all x and y</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>for P(Y=1</td>
+      <td>X=0) = 6/13 not equal to P(Y=1)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>\(P(X_0 \cap Y_1) \neq P(X_0)\cdot P(Y_1)\)</p>
+
+<h3 id="roll-2-dice-x-is-the-random-variable-of-the-number-of-faces-that-are-greater-or-equal-to-3-y-is-the-random-variable-of-the-maximum-of-2-faces-showing">Roll 2 dice. X is the random variable of the number of faces that are greater or equal to 3. Y is the random variable of the maximum of 2 faces showing.</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>x</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>\(R_y=\{0,1,2\}\)</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>y</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>4</td>
+      <td>4</td>
+      <td>4</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>\(R_y= \{1,2,3,4,5,6\}\)</p>
+
+<h4 id="a--find-the-joint-pmf">a.  Find the joint PMF</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>x/y</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+      <td>sum</td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1/36</td>
+      <td>3/36</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4/36</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4/36</td>
+      <td>4/36</td>
+      <td>4/36</td>
+      <td>4/36</td>
+      <td>16/36</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1/36</td>
+      <td>3/36</td>
+      <td>5/36</td>
+      <td>7/36</td>
+      <td>16/36</td>
+    </tr>
+    <tr>
+      <td>sum</td>
+      <td>1/36</td>
+      <td>3/36</td>
+      <td>5/36</td>
+      <td>7/36</td>
+      <td>9/36</td>
+      <td>11/36</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="b-find-the-marginal-pmfs">b. find the marginal PMFs</h4>
+
+<p>\(F_x(x) = \begin{cases}\frac{4}{36} &amp; \quad x = 0 \newline \frac{16}{36} &amp; \quad x = 1 \newline \frac{16}{36} &amp; \quad x = 2 \newline 0 &amp; \quad otherwise \end{cases}\)</p>
+
+<p>\(F_x(x) = \begin{cases}\frac{1}{36} &amp; \quad y = 1 \newline \frac{3}{36} &amp; \quad y = 2 \newline \frac{5}{36} &amp; \quad y = 3 \newline \frac{7}{36} &amp; \quad y = 4 \newline \frac{9}{36} &amp; \quad y = 5 \newline \frac{11}{36} &amp; \quad y = 6 \newline 0 &amp; \quad otherwise \end{cases}\)</p>
+
+<h3 id="example-3-given-the-random-variable-x-and-y-discrete-with-joint-pmf-shown-here">Example 3: Given the random variable X and Y (discrete) with joint PMF shown here</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>X/Y</td>
+      <td>0</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>Sum</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>1/8</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1/8</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>0</td>
+      <td>1/8</td>
+      <td>1/8</td>
+      <td>1/8</td>
+      <td>3/8</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>0</td>
+      <td>1/4</td>
+      <td>1/8</td>
+      <td>0</td>
+      <td>3/8</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>0</td>
+      <td>1/8</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1/8</td>
+    </tr>
+    <tr>
+      <td>sum</td>
+      <td>1/8</td>
+      <td>4/8</td>
+      <td>2/8</td>
+      <td>1/8</td>
+      <td>1</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="a-px-2-y--1">a. P(X&lt;= 2, Y = 1)</h4>
+<p>\(P(X=2, Y=1) + P(X=1, Y=1) + P(X=0, y =1) = 3/8\)</p>
+
+<h4 id="b-px--2-y-1">b. P(X &lt;= 2, Y &lt;=1)</h4>
+<p>\(P(X=2, Y=1) + P(X=1, Y=1) + P(X=0, Y=1) + P(X=1, Y=0) + P(X=0, Y=0) + P(X=2, Y=0) = \frac{1}{2}\)</p>
+
+<h4 id="c-px--2-y-1">c. P(X &lt;= 2, y &gt;=1)</h4>
+<p>\( P(X=0, Y =1) + P(X=0, Y = 2) + P(X=0, Y=3) + P(X=2, Y=1) + P(X=2, Y=2) + P(X=2, Y=3) + P(X=1, Y=1) + P(X=1, Y=2) + P(X=1, Y=3) = \frac{3}{4}\)</p>
+
+<h3 id="example-4-evaluate-the-following-integral-where-d-is-the-region-shown-in-the-sketch">Example 4: Evaluate the following integral, where D is the region shown in the sketch:</h3>
+
+<h4 id="intintdx2yda-range-1-leq-x-leq-3-frac1x-leq-y-leq-sqrtx">\(\int\int_Dx^2ydA\) range: \(1 \leq x \leq 3\) \(\frac{1}{x} \leq y \leq \sqrt{x}\)</h4>
+
+<p>\(\int_{x=1}^{3}\int_{y=\frac{1}{2}}^{\sqrt{x}}x^2y dy dx\)</p>
+
+<p>\(\int_{1}^{2}x^2 \frac{y^2}{2} \bigg|_{y=\frac{1}{x}}^{y=\sqrt{x}}dx\)</p>
+
+<p>\(int_{1}^{3}x^2\frac{1}{2}(\sqrt{x}^2 - (\frac{1}{x})^2)dx\)</p>
+
+<p>\(\frac{1}{2}\int_{1}{3}x^3dx - \frac{1}{2}\int_{1}^{3}1 dx\)</p>
+
+<p>\(\frac{1}{4}\cdot\frac{1}{4}x^4\bigg|_{1}^{3} - \frac{1}{2}x\bigg|_{1}^{3} = 10 - 1 = 9\)</p>
+
+<h3 id="example-5-evaluate-the-following-integral-where-d-is-the-region-shown-in-the-sketch">Example 5: Evaluate the following integral, where D is the region shown in the sketch:</h3>
+
+<h4 id="intintdey2da-range-0-leq-x-leq-4-fracx2-leq-y-leq-2">\(\int\int_De^{y^2}dA\) range: \(0 \leq x \leq 4\) \(\frac{x}{2} \leq y \leq 2\)</h4>
+
+<p>\(\int_{y=0}^{2}\int_{x=0}^{2y}e^{y^2}dx\)</p>
+
+<p>\(\int_{y=0}^{2} e^{y^2}\bigg|_{0}^{2y}dy\)</p>
+
+<p>\(\int_{y=0}^{2}2ye^{y^2}dy\)</p>
+
+<p>substitution: \(u = y^2 du = 2ydy\)</p>
+
+<p>\(\int e^4du = e^4 = e^{y^2}\bigg|_0^2 = e^4 - e^0 = e^4 - 1\)</p>
+
+<h3 id="example-6-x-and-y-are-random-variables-with-joint-pdf">Example 6: X and Y are random variables with joint pdf:</h3>
+
+<h4 id="fxyxy--begincasescx2y--quad-0-leq-y-leq-x-leq-1-newline-0--quad-otherwiseendcases">\(f_{xy}(x,y) = \begin{cases}cx^2y &amp; \quad 0 \leq y \leq x \leq 1 \newline 0 &amp; \quad otherwise\end{cases}\)</h4>
+
+<h4 id="a-find-rxy-and-show-in-the-x-y-plane">a. Find Rxy and show in the x-y plane</h4>
+
+<h4 id="b-find-c">b. Find c</h4>
+
+<p>\(1 = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}f_{xy}(x,y)dxdy\)</p>
+
+<p>\(1= \int_{0}^{1}\int{0}{x}cx^2y dydx = \int_0^1cx^2 dx\int_0^xy dy = \int_0^1cx^2(\frac{y^2}{2}\bigg|_0^x dx\)</p>
+
+<p>\(1 = \int_0^1cx^2(\frac{x^2}{2}dx = \int_0^1 \frac{c}{2}x^4 dx = \frac{c}{10}x^5\bigg|_0^1 = 1\)</p>
+
+<p>\(\frac{c}{10} = 1 \to c = 10\)</p>
+
+<h4 id="c-find-the-marginal-pdfs">c. Find the marginal pdfs</h4>
+
+<p>\(R_x = R_y = [0, 1]\)</p>
+
+<p>\(f_x(x) = \int_{-\infty}^{\infty}f_{xy}(x,y)dy = \int_0^x10x^2ydy = 10x^2\frac{y^2}{2}\bigg|_0^x\)</p>
+
+<p>\(f_x(x) = \begin{cases}5x^4 &amp; \quad 0 \leq x \leq 1 \newline 0 &amp; \quad otherwise\end{cases}\)</p>
+
+<p>\(f_y(y) = \int{-\infty}^{\infty}f_{xy}(x,y) dx = \int_y^110x^2ydx = 10y\frac{x^3}{3}\bigg|_y^1\)</p>
+
+<p>\(f_y(y) = \begin{cases}\frac{10}{3}y(1-y^3) &amp; \quad 0 \leq y \leq 1 \newline 0 &amp; \quad otherwise\end{cases}\)</p>
+
+<h4 id="d-find-py--2">d. Find P(Y &lt;= 2)</h4>
+
+<p>\(P(Y \leq 2) = \int_{-\infty}^{\infty}\int_0^2f_{xy}(x,y) dydx = \int_0^1\int_0^{\frac{x}{2}}10x^2y dydx = \int_0^1\frac{5}{4}x^4dx = \frac{1}{4}\)</p>
+
+<h4 id="e-find-py--x4--y-x2">e. Find P(Y &lt;= x/4 | Y &lt;=X/2)</h4>
+
+<p>\(\frac{P(y \leq \frac{x}{4}, y \leq \frac{x}{2}}{P(y \leq \frac{x}{2})}\)</p>
+
+<p>\(4\int_0^1\int_0^{\frac{x}{4}}10x^2y dydx = 4 \int_0^1x^4dx = \frac{1}{4}\)</p>
