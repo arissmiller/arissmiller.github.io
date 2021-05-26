@@ -1,0 +1,353 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+<style>
+  body {
+    background-color: #ADD8E6;
+  }
+  h2 {
+    background-color: #FFFFFF;
+  }
+  h3 {
+    text-decoration:underline black;
+  }
+</style>
+
+<h1 id="class-10-notes-may-25">Class 10 Notes (May 25)</h1>
+
+<h2 id="definitions">Definitions</h2>
+
+<h3 id="joint-cumulative-distribution-function">Joint Cumulative Distribution Function</h3>
+
+<p>\(F_{xy}(x,y) = P(X \leq x and Y \leq y)\)</p>
+
+<p>\(F_x(x) = F_{xy}(x, \infty)\) for any x</p>
+
+<p>\(F_y(y) = F_{xy}(y, \infty)\) for any y</p>
+
+<p>\(F_{xy}(-\infty, \infty) = 1\)</p>
+
+<p>\(F_{xy}(-\infty, y) = F_{xy}(x, -\infty) = 0\)</p>
+
+<p>\(P( x_1 \lt x \lt x_2, y_1 \lt y \lt y_2) = F_{xy}(x_2, y_2) - F_{xy}(x_1, y_2) - F_{xy}(x_2, y_1) + F_{xy}(x_1, y_1)\)</p>
+
+<p>if x and y are independent \(F_{xy} = F_x(x) - F_y(y)\)</p>
+
+<h3 id="independent-random-variables">Independent random variables:</h3>
+
+<ul>
+  <li>
+    <p>If jointly continuous random variables are independent:</p>
+
+    <ul>
+      <li>\(f\{x\mid y\} - f_x(x)\) since knowing the value of y does not change the pdf of x b/c they are independent</li>
+      <li>\(f_{xy}(x,y) = f_x(x) \cdot f_y(y)\)</li>
+    </ul>
+  </li>
+  <li>
+    <p>If jointly discrete random variables are independent:</p>
+  </li>
+  <li>
+    <p>\(P(X=a and Y=b) = P(X=a)\cdot P(Y=b)\) for every point a and b</p>
+  </li>
+</ul>
+
+<h3 id="expected-value-discrete">Expected value (discrete):</h3>
+
+<ul>
+  <li>If x and y are discrete random variables with a joint pmf \(P_{xy}(x,y):</li>
+  <li>
+    <p>If \(u(x,y)\) is a function of these two random variables:</p>
+
+    <ul>
+      <li>\(E[u(x,y)] = \sum_x \sum_y u(x,y) \cdot P_xy(x,y)\)</li>
+      <li>if \(u(x,y) = x\) then: \E[x] = \sum_x\sum_y xP_{xy}(x,y)\)</li>
+      <li>if \(u(x,y) = y\) then: \E[y] = \sum_x\sum_y yP_{xy}(x,y)\)</li>
+      <li>if \(u(x,y) = x * y\) then: E[xy] = \sum_x\sum_y xyP_{xy}(x,y)\)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="variance-discrete">Variance (discrete):</h3>
+
+<ul>
+  <li>If \(u(x,y) = (x-\mu_x)^2\) then
+    <ul>
+      <li>\(\sigma_x^2 = var(x) = \sum_x \sum_y (x-\mu_x)^2P_{xy}(x,y)\)</li>
+      <li>\(\sigma_x^2 = var(x) = E(x^2) - [E(x)]^2 = [\sum_x \sum_y x^2P_{xy}(x,y)] - \mu_x^2\)</li>
+    </ul>
+  </li>
+  <li>If \(u(x,y) = (y - \mu_y)^2\) then
+    <ul>
+      <li>\(\sigma_y^2 = var(y) = \sum_x \sum_y (y-\mu_y)^2P_{xy}(x,y)\)</li>
+      <li>\(\sigma_y^2 = var(y) = E(y^2 - [E(y)]^2 = [\sum_x\sum_y y^2P_{xy}(x,y) - \mu_y^2\)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="expected-value-continuous">Expected Value (continuous):</h3>
+
+<ul>
+  <li>
+    <p>\(E[g(x,y)] = \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}g(x,y)\cdot f_{xy}(x,y)dxdy\)</p>
+  </li>
+  <li>
+    <p>If \(g(x,y) = xy\) then:</p>
+
+    <ul>
+      <li>
+        <p>E[xy] = \(\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}xyf_{xy}(x,y)dxdy\)</p>
+      </li>
+      <li>
+        <p>If x and y are independent, \(E[xy] = E[x] \cdot E[y]\)</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="example-7-let-x-and-y-be-2-independent-random-variables-in-a-uniform-distribution0-1-find-fxyx-y">Example 7: let X and Y be 2 independent random variables in a uniform distribution(0, 1). Find Fxy(x, y).</h3>
+
+<p>\(F_x(x) = \begin{cases}0 &amp; \quad x \lt 0 \newline x &amp; \quad 0 \leq x \leq 1 \newline 1 &amp; \quad x \ge 1\end{cases}\)</p>
+
+<p>\(F_y(y) = \begin{cases}0 &amp; \quad y \lt 0 \newline y &amp; \quad 0 \le1 y \leq 1 \newline 1 &amp; \quad y \gt 1\end{cases}\)</p>
+
+<p>Since x and y are independent,</p>
+
+<p>\(F_{xy}(x,y) = F_x(x) \cdot F_y(y)\)</p>
+
+<p>\(F_{xy}(x,y) = \begin{cases}0 &amp; \quad x \lt 0 or y \lt 0 \newline xy &amp; \quad 0 \leq x \leq 1 or 0 \leq y \leq 1 \newline x &amp; \quad 0 \leq x \leq 1 or y \gt 1 \newline y &amp; \quad x \ge 1 0 \leq y \leq 1 \newline 1 x &amp; \quad x \gt 1 y \gt 1 \end {cases}\)</p>
+
+<h3 id="example-8-given-x-and-y-are-2-jointly-continuous-random-variables-with-joing-pdf">Example 8: Given X and Y are 2 jointly continuous random variables with joing pdf:</h3>
+
+<p>\(f_{xy}(x,y) = \begin{cases}x  + cy^2 &amp; \quad 0 \leq x \leq 1, 0 \leq y \leq 1 \newline &amp; \quad otherwise \end{cases}\)</p>
+
+<h4 id="a-find-c">a. Find c</h4>
+
+<p>\(\int_{-\infty}^{\infty}\int_{-\infty}^{infty}f_{xy}(x,y)dxdy = 1\)</p>
+
+<p>\(\int_0^1\int_0^1x + cy^2dxdy = \int_0^1\frac{x^2}{2}+cxy\bigg|_0^1dy\)</p>
+
+<p>\(\int_0^1(\frac{1}{2} + cy^2)dy = \frac{1}{2}y + \frac{1}{3}y \cdot c \bigg|_0^1\)</p>
+
+<p>\(\frac{1}{3}c + \frac{1}{2} = 1\)</p>
+
+<p>\(c = \frac{3}{2}\)</p>
+
+<h4 id="b-p0-leq-x-leq-frac12-0-leq-y-leq-frac12">b. \(P(0 \leq x \leq \frac{1}{2}, 0 \leq y \leq \frac{1}{2})\)</h4>
+
+<p>\(\int_0^{\frac{1}{2}}\int_0^{\frac{1}{2}}(x + \frac{3}{2}y^2)dxdy = \int_0^{\frac{1}{2}} + \frac{3}{2}y^2 \cdot x \bigg|_{x=0}^{\frac{1}{2}}dy\)</p>
+
+<p>\(\int_0^{\frac{1}{2}}(\frac{1}{8} + \frac{3}{4}y^2)dy = \frac{1}{8}y + \frac{3}{4} \cdot \frac{1}{3} \cdot y^3 \bigg|_0^{\frac{1}{2}} = \frac{3}{32}\)</p>
+
+<h4 id="cfind-the-marginal-pdfs-fxx-and-fyy">c.find the marginal pdfs fx(x) and fy(y)</h4>
+
+<p>integrate over all x values with respect to y</p>
+
+<p>\(f_x(x) = \int_0^1(x + \frac{3}{2}y^2)dy = xy + \frac{1}{2}y^3\bigg|_0^1\)</p>
+
+<p>\(f_x(x) = \begin{cases}x + \frac{1}{2} &amp; \quad 0 \leq x \leq 1 \newline 0 &amp; \quad otherwise\end{cases}\)</p>
+
+<p>integrate of all y values with respect to x</p>
+
+<p>\(f_y(y) = \int_0^1(x + \frac{3}{2}y^2)dx = \frac{1}{2}x^2 + \frac{3}{2}y^2\cdot x \bigg|_0^1\)</p>
+
+<p>\(f_y(y) = \begin{cases} \frac{1}{2} + \frac{3}{2}y^2 &amp; \quad  0 \leq y \leq 1 \newline 0 &amp; \quad otherwise\end{cases}\)</p>
+
+<h4 id="d-joint-cumulative-function">d. Joint cumulative function</h4>
+
+<p>\(f_x(x,y) = \begin{cases} x + \frac{3}{2}y^2 &amp; \quad 0 \leq x \leq 1, 0 \leq y \leq 1 \newline 0 &amp; \quad otherwise \end{cases}\)</p>
+
+<p>\(F_{xy}(x,y) = \int{-\infty}^{\infty}\int{-\infty}^{\infty}f_{xy}dudu = \int_0^y\int_0^x(u + \frac{3}{2}v^2dudv\)</p>
+
+<p>for \(0 \leq x \leq 1\) and \(0 \leq y \leq 1\):</p>
+
+<p>\(F_{xy}(x,y) = \int_0^1\frac{1}{2}u^2 + \frac{3}{2}v^2u\bigg|_{u=0}^x dv = \int_0^y(\frac{1}{2}x^2 + \frac{3}{2}xv^2)dv = \frac{1}{2}x^2v + \frac{3}{2}x\frac{v^3}{3}\bigg|_{v=0}^y\)</p>
+
+<p>\(F_{xy}(x,y) = \frac{1}{2}x^2y + \frac{1}{2}xy^3\)</p>
+
+<p>for \(0 \leq x \leq 1\) and \(y \geq 1\)</p>
+
+<p>\(F_{xy}(x,y) = F_{xy}(x,1) = \frac{1}{2}x^2 + \frac{1}{2}x\)</p>
+
+<p>for \(0 \leq y \leq 1\) and \(x \geq 1\)</p>
+
+<p>\(F_{xy}(x,y) = F_{xy}(1,y) = \frac{1}{2}y + \frac{1}{2}y^3\)</p>
+
+<p>\(F_{xy}(x,y) = \begin{cases}\frac{1}{2}x^2y + \frac{1}{2}xy^3 &amp; \quad 0 \leq x \leq 1, 0 \leq y \leq 1 \newline \frac{1}{2}x^2 + \frac{1}{2}x &amp; \quad 0 \leq x \leq 1, y \gt 1 \newline \frac{1}{2}y + \frac{1}{2}y^3 &amp; \quad x \gt 1, 0 \leq y \leq 1 \newline 1 &amp; \quad x \gt 1, y \gt 1 \end{cases}\)</p>
+
+<h3 id="example-9-determine-wether-or-not-x-and-y-are-independent">Example 9: Determine wether or not X and Y are independent:</h3>
+
+<p>\(f_{xy} = \begin{cases} 8xy &amp; \quad 0 \lt x \lt y \lt 1 \newline 0 &amp; \quad otherwise\end{cases}\)</p>
+
+<p>note the \(\lt\) as opposed to \(\leq\), this indicates that the value of x is depenent on the value of y since \(x \lt y\)</p>
+
+<p>we need to show this mathematiccally, using marginal pdfs</p>
+
+<p>is joint pdf equal to product of marginal pdfs?</p>
+
+<p>\(f_x(x) = \int_x^18xydy = 8x\frac{y^2}{2}\bigg|_{y=x}^1 = 4x(1-x^2)\)</p>
+
+<p>\(f_x(x) = \begin{cases} 4x(1-x^2) &amp; \quad 0 \lt x \lt 1 \newline 0 &amp; \quad otherwise \end{cases}\)</p>
+
+<p>\(f_y(y) = \int_0^y8xydx = 4x^2y\bigg|_{x=0}^y = 4y^3\)</p>
+
+<p>\(f_y(y) = \begin{cases}4y^3 &amp; \quad 0 \lt y \lt 1 \newline 0 &amp; \quad otherwise \end{cases}\)</p>
+
+<p>\(8xy \neq 4x(1-x^2)\cdot 4y^3\)</p>
+
+<p>therefore, they are not independent</p>
+
+<h3 id="example-1-we-toss-two-4-sided-dice-one-is-black-and-one-is-red-x-is-the-random-variable-for-the-outcome-of-the-red-die-y-is-the-random-variable-for-the-outcome-of-the-black-die-what-is-the-probability-that-x-takes-on-a-particular-value-x-and-y-takes-on-a-particular-value-y-pxx-yy">Example 1: We toss two 4-sided dice, one is black and one is red. X is the random variable for the outcome of the red die. Y is the random variable for the outcome of the black die. What is the probability that X takes on a particular value, x, and Y takes on a particular value, y? P(x=x, Y=y)</h3>
+
+<p>\(X \to \{1,2,3,4\}, Y \to \{1,2,3,4\}\)</p>
+
+<p>\(S = \{(1,1), (1,2), (1,3), (1,4), (2,1), (2,2), (2,3), (2,4), (3,1), (3,2), (3,3), (3,4), (4,1), (4,2), (4,3), (4,4)\}\)</p>
+
+<p>16 possible outcomes, all outcomes are possibly likely</p>
+
+<p>\(\therefore P(X=x, Y=y) = \frac{1}{16}\)</p>
+
+<h4 id="build-a-probability-mass-function">build a probability mass function:</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>\(P_{xy}(x,y)\)</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>\(P_x(x)\)</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>\(\frac{1}{16}\)</td>
+      <td>\(\frac{1}{16}\)</td>
+      <td>\(\frac{1}{16}\)</td>
+      <td>\(\frac{1}{16}\)</td>
+      <td>\(\frac{4}{16}\)</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>\(\frac{1}{16}\)</td>
+      <td>\(\frac{1}{16}\)</td>
+      <td>\(\frac{1}{16}\)</td>
+      <td>\(\frac{1}{16}\)</td>
+      <td>\(\frac{4}{16}\)</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>\(\frac{1}{16}\)</td>
+      <td>\(\frac{1}{16}\)</td>
+      <td>\(\frac{1}{16}\)</td>
+      <td>\(\frac{1}{16}\)</td>
+      <td>\(\frac{4}{16}\)</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>\(\frac{1}{16}\)</td>
+      <td>\(\frac{1}{16}\)</td>
+      <td>\(\frac{1}{16}\)</td>
+      <td>\(\frac{1}{16}\)</td>
+      <td>\(\frac{4}{16}\)</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>\(P_y(y)\)</td>
+      <td>\(\frac{4}{16}\)</td>
+      <td>\(\frac{4}{16}\)</td>
+      <td>\(\frac{4}{16}\)</td>
+      <td>\(\frac{4}{16}\)</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="what-is-mean-of-x-mean-of-y">what is mean of x? mean of y?</h4>
+
+<p>\(\mu_x = E[x] = \sum_xxP_x(x,y) = \sum_x\sum_yxP_{xy}(x,y)\)</p>
+
+<p>\(E[x] = 1(\frac{4}{16}) + 2(\frac{4}{16}) + 3(\frac{4}{16}) + 4(\frac{4}{16}) = \frac{40}{16} = 2.5\)</p>
+
+<p>\(\mu_y = E[y] = \sum_yyP_y(x,y) = \sum_x\sum_yyP_{xy}(x,y)\)</p>
+
+<p>\(E[y] = 1(\frac{4}{16} + 2(\frac{4}{16}) + 3(\frac{4}{16}) + 4(\frac{4}{16}) = \frac{40}{16} = 2.5\)</p>
+
+<h4 id="what-is-the-variance-of-x-variance-of-y">What is the variance of x? variance of y?</h4>
+
+<p>\(\sigma_x^2 = E(x^2) = [E(x)]^2 = \sum_xx^2P_x(x,y)-(\mu_x)^2\)</p>
+
+<p>\(\sigma_x^2 = 1^2(\frac{4}{16} + 2^2(\frac{4}{16}) + 3^2(\frac{4}{16} +  4^2(\frac{4}{16}) - (2.5)^2 = \frac{120}{16} - (2.5)^2 = 1.25\)</p>
+
+<p>\(\sigma_y^2 = E(y^2) - [E(y)]^2 = \sum_yy^2P_y(x,y)-(\mu_y)^2\)</p>
+
+<p>\(\sigma_y^2 = 1^2(\frac{4}{16} + 2^2(\frac{4}{16}) + 3^2(\frac{4}{16} +  4^2(\frac{4}{16}) - (2.5)^2 = \frac{120}{16} - (2.5)^2 = 1.25\)</p>
+
+<p>\(\sigma_{xy}^2 = E((xy)^2) - [E(xy)]^2\)</p>
+
+<h3 id="example-2-x-and-y-are-continuous-random-variables-with-joint-probability-density-function-fxyxy--4xy-where-0-lt-x-lt-10-lt-y-lt-1">Example 2: X and Y are continuous random variables with joint probability density function \(f_{xy}(x,y) = 4xy\) where \(0 \lt x \lt 1,0 \lt y \lt 1\)</h3>
+
+<h4 id="a-is-fxyxy-a-valid-pdf">a. is \(f_{xy}(x,y)\) a valid pdf?</h4>
+
+<p>in order for \(f_{xy}(x,y)\) must be non-negative and all probabilities must sum to 1.</p>
+
+<p>we know it is non-negative.</p>
+
+<p>\(\int_0^1\int_0^14xydxdy = \int_0^14y\frac{x^2}{2}\bigg|_{x=0}^1 dy = \int_0^12ydy = y^2\bigg|_0^1 = 1\)</p>
+
+<p>yes, it is valid</p>
+
+<h4 id="b-what-is-py--x">b. What is P(Y &lt; X)</h4>
+
+<p>\(P(Y \lt X) \to P(0 \lt y \lt x)\)</p>
+
+<p>\(\int_0^1\int_0^x4xydydx = \int_0^14x\frac{y^2}{2}\bigg|_{y=0}^{y=x}dx = \int_0^12x^3dx = \frac{2}{4}x^4\bigg|_0^1 = \frac{1}{2}\)</p>
+
+<h4 id="c-what-are-the-marginal-density-functions-fxx-and-fyy">c. What are the marginal density functions, \(f_x(x)\) and \(f_y(y)\)</h4>
+
+<p>\(f_x(x) = \int_{y=0}^{y=1}4xydy = 4x\frac{y^2}{2}\bigg|_{y=0}^{y=2} = 2y \) for \(0 \lt y \lt 1\)</p>
+
+<p>\(f_x(x) = \begin{cases} 2x &amp; \quad 0 \lt x \lt 1 \newline 0 &amp; \quad otherwise\end{cases}\)</p>
+
+<p>\(f_y(y) = \int_{x=0}^{x=1}4xydx = 4y\frac{x^2}{2}\bigg|_{x=0}^{x=1} = 2y\)</p>
+
+<p>\(f_y(y) = \begin{cases}27 &amp; \quad 0 \lt y \lt 1 \newline 0 &amp; \quad otherwise\end{cases}\)</p>
+
+<h4 id="d-what-are-the-expected-values-ex-and-ey">d. What are the expected values E[X] and E[Y]?</h4>
+
+<p>\(E[X] = \int_0^1x\int_0^1x(4xy)dxdy = \int_0^1\int_0^14x^2dxdy = \int_0^1\frac{4}{3}x^3y\bigg|_{x=0}^{1}dy\)</p>
+
+<p>\(E[X] = (\int{0}{1}\frac{4}{3}ydy = \frac{4y^2}{6}\bigg|_0^1 = \frac{2}{3}\)</p>
+
+<p>\(E[Y] = \int_0^1\int_0^1y(4xy)dxdy = \int_0^1\int_0^14xy^2dxdy = \int_0^1\frac{4x^2}{2}y^2\bigg|_{x=0}^1 dy\)</p>
+
+<p>\(E[Y] = \int_0^12y^2dy = \frac{2}{3}y^3\bigg|_0^1 - \frac{2}{3}\)</p>
+
+<h4 id="e-are-x-and-y-independent">e. Are X and Y independent?</h4>
+
+<p>if independent, \(f_{xy}(x,y) = f_x(x) \cdot f_y(y)\)</p>
+
+<p>\(4xy = 2x \cdot 2y\)</p>
+
+<p>so, yes</p>
+
+<h4 id="f-what-are-the-variance-of-x-and-the-variance-of-y">f. What are the variance of X and the variance of Y?</h4>
+
+<p>\(\sigma_x^2 = E[x^2] - (E[X])^2\)</p>
+
+<p>\(E[x^2] = \int_0^1\int_0^1x^2(4xy)dxdt = \int_0^1\int_0^14x^3ydxdy = \int_0^1x^4\bigg|_0^1ydy =\int_0^1ydy\)</p>
+
+<p>\(E[x^2] = \frac{1}{2}\bigg|_0^1 = \frac{1}{2}\)</p>
+
+<p>\(\sigma_x^2 = \frac{1}{2} - (\frac{2}{3})^2 = \frac{1}{18}\)</p>
+
+<p>\(\sigma_y^2 = E[y^2] - (E[y])^2\)</p>
+
+<p>\(\int_0^1\int_0^1y^2(4xy)dxdy = \int_0^1\int_0^14xy^3dxdy = \int_0^12x^2\bigg|_0^1y^3dy = \int_0^122y^3dy=\frac{2y^4}{4}\bigg|_0^1 = \frac{1}{2}\)</p>
+
+<p>\(\sigma_0^2 = \frac{1}{2} - (\frac{2}{3})^2 = \frac{1}{18}\)</p>
