@@ -1,0 +1,133 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+<style>
+  body {
+    background-color: #ADD8E6;
+  }
+  h2 {
+    background-color: #FFFFFF;
+  }
+  h3 {
+    text-decoration:underline black;
+  }
+</style>
+
+<h1 id="class-12-notes-01-jun">Class 12 Notes (01 Jun)</h1>
+
+<h2 id="definitions">Definitions:</h2>
+
+<h3 id="poisson-distribution">Poisson distribution:</h3>
+
+<p>probability mass function that models real world phenomena</p>
+
+<ul>
+  <li>
+    <p>number of typos on printed page</p>
+  </li>
+  <li>
+    <p>number of cars passing though an intersection</p>
+  </li>
+  <li>
+    <p>alaskan salmon caught in a net</p>
+  </li>
+  <li>
+    <p>cutomsers at an ATM in 10 min intervals</p>
+  </li>
+  <li>
+    <p>number of alpha particles emitted by a radioactive source in a given time</p>
+  </li>
+</ul>
+
+<p>X = descrete ranom variable that denotes the # of times a given event occurs within an interval of time or space</p>
+
+<h3 id="poisson-limit">Poisson Limit:</h3>
+
+<p>Used to approximate hard to calculate binoomial probabilities where values of n and p reflect conditions of limit</p>
+
+<p>\(n\to \infty\)  \(p \to 0\) but \(n \cdot p\) is constant</p>
+
+<p>Remember: \(n \cdot p = E(x)\) for Binomial random variables, and \(n \cdot p \cdot q = Var(x)\)</p>
+
+<h3 id="deriving-poisson-from-binomial-distribution">Deriving Poisson from Binomial distribution:</h3>
+
+<p>X = Binomial Random Variable</p>
+
+<p>\(P(X=k)  = P_x(k) = (n \choose k) p^k(1-p)^{n-k} k = 0,1,2…n\)</p>
+
+<p>Poisson Distribution = \(\frac{e^{-np}(np)^k}{k!} = P(X=k)\)</p>
+
+<ol>
+  <li>no explicit Binomrial variable is present</li>
+  <li>Values for na and p are unavailable</li>
+</ol>
+
+<p>X (disccrete random variable is said to have a poisson distr. if:</p>
+
+<p>\(P_x(k) = \frac{e^{-\lambda}\lambda^k}{k!}\)</p>
+
+<h3 id="probability-table-for-poisson-show-values-of-px-4-or-px---3-cumulative-so-to-find-px4-you-would-have-to-subtract-px4-px3">Probability table for poisson show values of P(X &lt;=4) or P(X  &lt;= 3) cumulative, so to find P(X=4) you would have to subtract P(X&lt;=4)-P(X&lt;=3)</h3>
+
+<h3 id="modeling-a-series-of-events-within-a-given-time-interval-t">Modeling a series of events within a given time interval T</h3>
+<ol>
+  <li>Probability &gt;= 2 events occur within a given subinterval isgoes to 0</li>
+  <li>The events occur indepentently (binomial))</li>
+  <li>The probability that an event occurs duringa given subinteral is constant over the entire interval from[0 to T]</li>
+  <li>Each sub interval is like an independent tryial in abinomial model</li>
+</ol>
+
+<p>X = discrete ranom variable for tot al # of vents occuring within T</p>
+
+<p>\(\lambda =\) the rate at which  the events are occurring</p>
+
+<p>\(E(X) = \lambda \cdot T = n \cdot p\)</p>
+
+<p>\(P_n =\) probability that an event occurs within a given subinterval = \(\frac{\lambda T}{n}\)</p>
+
+<p>\(\therefore P_x(k) = \frac{e^{-\lambda T}(\lambda T)^k}{k!}\)</p>
+
+<h3 id="the-interval-between-consecutively-ocurring-events-can-be-modeled-with-poisson">The interval between consecutively ocurring events can be modeled with Poisson</h3>
+<p>x = # of ocurrences</p>
+
+<p>y = interval between occurrences</p>
+
+<p>Series of events is a poisson model, where \(\lambda\) = rate at which events are occuring</p>
+
+<p>y = random vairable for interval between consecutive events</p>
+
+<p>\(f_y(y) = \lambda e^{-\lambda y} y \gt 0\)</p>
+
+<h2 id="examples">Examples</h2>
+
+<h3 id="example-1-given-the-random-variable-x--the-number-of-typos-on-a-printed-page-with-a-mean-of-3-typos-per-page">Example 1: Given the random variable X = the number of typos on a printed page, with a mean of 3 typos per page:</h3>
+
+<h4 id="a-what-is-the-probability-that-a-randomly-selected-pag-has-at-least-one-typo-on-it">a: What is the probability that a randomly selected pag has at least one typo on it?</h4>
+
+<p>Use pmf for poisson:  \(\frac{e^{-np}(np)^k}{k!} = P(X=k)\)</p>
+
+<p>at least one = 1 - P(X=0))</p>
+
+<p>\(P(X \geq 1)) = 1 - P(X=0) = 1 - \frac{e^{-3}3^0}{0!} = 1 - e^{-3} \approx 0.9502\)</p>
+
+<h4 id="b-what-is-the-probability-that-randomly-selected-age-will-have-at-most-one-typo">b: What is the probability that randomly selected age will have AT MOST one typo?</h4>
+
+<p>at most one: \(P(X \leq 1) = P(X=1) + P(X=0)\)</p>
+
+<p>\(= \frac{e^{-3}3^1}{1!} + \frac{e^{-3}3^0}{0!} = 4e^3 \approx 00.1992\)</p>
+
+<h3 id="the-random-variable-x--the-number-of-bug-parts-in-200-grams-of-peanut-butter-assuming-the-worst-contamination-level-at-the-fda-limit-of-30-insect-parts100grams-03-fragments-per-gram-what-is-the-proability-that-a-20-gram-sandwich-will-hae-more-than-5-bug-parts">The random variable X = the number of bug parts in 200 grams of peanut butter. Assuming the worst contamination level, at the FDA limit of 30 insect parts/100grams (0.3 fragments per gram). what is the proability that a 20 gram sandwich will hae more than 5 bug parts?</h3>
+
+<p>In 20 grams of pb, we get (20g)(0.3f) = 6.0 fragments. This means that the mean E(X) = 6.0 = \(\lambda\)</p>
+
+<p>What is the probability that  there are 5 or more bug parts?</p>
+
+<p>\(P(X \geq 5) = 1 - P(X \leq 4) = 1 - \sum_{k=0}^4\frac{3^{-6}6^k}{k!} = 1 - 0.29 = 0.71\)</p>
+
+<p>71 % chance of getting 5 or more bug parts in a sandwich</p>
+
+<h3 id="a-meteor-shower-is-a-poisson-event-and-sightings-can-be-as-high-as-40hour-y-is-the-random-variable-for-the-interval-between-consecutive-sightings-in-minutes-what-is-the-probability-that-and-ovserver-who-has-just-seen-a-meteor-will-have-to-wait--5-minutes-before-seeing-another">A meteor shower is a poisson event, and sightings can be as high as 40/hour. Y is the random variable for the interval between consecutive sightings (in minutes). What is the probability that and ovserver who has just seen a meteor will have to wait &gt;= 5 minutes before seeing another?</h3>
+
+<p>\(\lambda e^{-\lambda y}\)</p>
+
+<p>40/hr =  0.67 sightings per minute = \(\lambda\)</p>
+
+<p>\(P(X \geq 5) = \int_5^\infty 0.67e^{-0.67y}dy = \displaystyle{\lim_{b\to\infty}}\int_5^b0.67e^{-0.67y}dy \approx 0.035\)</p>
