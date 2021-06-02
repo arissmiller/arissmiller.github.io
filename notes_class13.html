@@ -1,0 +1,243 @@
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+
+<style>
+  body {
+    background-color: #ADD8E6;
+  }
+  h2 {
+    background-color: #FFFFFF;
+  }
+  h3 {
+    text-decoration:underline black;
+  }
+</style>
+
+<h1 id="class-13-notes-jun-02">Class 13 Notes: Jun 02</h1>
+
+<h2 id="definitions">Definitions:</h2>
+
+<h3 id="normal-distributions">Normal Distributions:</h3>
+<p>The continuous random variable X follows a Normal Distribution if its pdf is:</p>
+
+<p>\(f_x(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{1}{2}(\frac{x-\mu}{\sigma})^2}\)</p>
+
+<p>mean = \(\mu\)
+variance = \(\sigma^2\)
+\(x~N(\mu,\sigma^2)\)</p>
+
+<p>Charateristics:</p>
+
+<ol>
+  <li>
+    <p>Bell shaped peak = maxium = \(x=\mu)\), Inflection peaks at \(x = \mu \pm \sigma\)</p>
+  </li>
+  <li>
+    <p>All normal curves are symmetric about \(\mu\)</p>
+  </li>
+  <li>
+    <p>Area under normal curve = 1</p>
+  </li>
+  <li>
+    <p>\(f(x) \approx N(\mu, \sigma^2) \gt 0\) (All probabilities are positive)\)</p>
+  </li>
+  <li>
+    <p>\(\lim{x\to\infty} f(x) = 0 \lim{x\to -\infty} = 0\)</p>
+  </li>
+  <li>
+    <p>The are under normal curve that lies within one standard deviation is ~0.68, about 68% of the total area</p>
+  </li>
+  <li>
+    <p>2 Standard deviations of mean ~ 0.95 (95%), 3 standard deviations ~ .997 (99.7%)</p>
+  </li>
+</ol>
+
+<p>“Standard Normal”: \(\mu = 0\),\(\sigma = 1\) ~N(0,1)</p>
+
+<h3 id="z-value">Z value:</h3>
+
+<p>A number of standard deviations that a particular X is away from the mean</p>
+
+<p>\(z  = \frac{\bar{x} - \mu}{\sigma}\)</p>
+
+<p>Are under a standard normal curve = probability</p>
+
+<ol>
+  <li>
+    <p>to the left of any z value: use table</p>
+  </li>
+  <li>
+    <p>To the right of any z value: subtract area to the left from 1</p>
+  </li>
+  <li>
+    <p>Between 2 z values: subtract are to left of left z from right z</p>
+  </li>
+</ol>
+
+<h3 id="continuity-correction">Continuity Correction:</h3>
+
+<p>When we have a normal approximation to a Binomial distribution</p>
+
+<p>n is large, but experiment is binomial.</p>
+
+<p>appropriate when \(np \geq 5\) \(nq \geq 5\)</p>
+
+<p>for \(P(X=a)\) use \(  P(a - 0.5 \lt x \lt a + 0.5)\)</p>
+
+<p>for \(P(X\geq a)\)  use \( P(x \geq a - 0.5)\)</p>
+
+<p>for \(P(X \gt a)\) use \(P(X \gt a + 0.5)\)</p>
+
+<p>for \(P(X \leq a)\) use \(P(X \lt a + 0.5)\)</p>
+
+<p>for \(P(X \lt a)\) use \(P(X \lt a - 0.5)\)</p>
+
+<p>for binomial probabilities: \(\mu = np\) and \(\sigma = \sqrt{npq}\)</p>
+
+<h3 id="central-limit-theorem">Central limit theorem</h3>
+
+<p>How do the means of samples of the sames size taken from the same population vary about the population mean?</p>
+
+<p>Sampling distribution(of sample means) is a distribution obtained by using the means computed from random samples of a specific size taken from the population</p>
+
+<p>Sampling error: Is the difference between the sample measure and corresponding population measure (i.e. sample is not a perfect representation of the population \(E(\bar{x}) = \mu_{\bar{x}} = \mu\)</p>
+
+<p>Mean of the sample means will be the same as population mean</p>
+
+<p>Standard deviation of sample means will be smaller than the standard dev of population \(\frac{\sigma}{\sqrt{n}}\)</p>
+
+<p>variance = \(\frac{\sigma^2}{n} = \sigma_{\bar{x}}^2\)</p>
+
+<p>\(z = \frac{\bar{x} - \mu}{\frac{\sigma}{\sqrt{n}}}\)</p>
+
+<p>When \(n \geq 30\) you have a large enough sample size that distribution is normal, unless otherwise stated.
+##Examples:</p>
+
+<h3 id="what-is-the-area-to-the-left-of-z--209">What is the area to the left of z = 2.09:</h3>
+
+<p>from table: 0.9817</p>
+
+<h3 id="what-is-the-area-to-the-right-of-z---114">What is the area to the right of z = -1.14:</h3>
+
+<p>\(1 - 0.1271 = 0.8729\)</p>
+
+<h3 id="what-is-the-area-between-z--162-and-z---135">What is the area between z = 1.62 and z = -1.35</h3>
+
+<p>\(0.9474 - 0.0885 = 0.8589\)</p>
+
+<h3 id="example-4-what-is-the-probability-z-is-between-0-and-253">Example 4: What is the probability z is between 0 and 2.53</h3>
+
+<p>\(0.9943 - 0.5\)</p>
+
+<h3 id="an-adult-has-an-average-of-52-liters-of-blood-assume-the-variable-is-normally-distributed-and-has-a-standard-deviation-of-03-find-the-percentage-of-people-who-have-less-than-54-litres-of-blood">An adult has an average of 5.2 liters of blood. Assume the variable is normally distributed and has a standard deviation of 0.3, Find the percentage of people who have less than 5.4 litres of blood.</h3>
+
+<p>Average = \(\mu = 5.2\)</p>
+
+<p>Standard Deviation = \(\sigma = 0.3\)</p>
+
+<p>Value = \(\bar{x} = 5.4\)</p>
+
+<p>\(z = \frac{\bar{x} - \mu}{\sigma} = \frac{5.4 - 5.2}{0.3} = 0.67\)</p>
+
+<p>Use table p(z &lt; .67) = 0.7257</p>
+
+<h3 id="example-6-each-month-an-american-household-generates-an-average-of-28-pounds-of-newspaper-waster-assume-this-is-aproximately-normally-distributed-and-the-standard-deviation-is-2-pounds-a-house-is-selected-at-random">Example 6: Each month, an American household generates an average of 28 pounds of newspaper waster. Assume this is aproximately normally distributed and the standard deviation is 2 pounds. A house is selected at random.</h3>
+
+<h4 id="a-what-is-the-probability-they-generate-betweeen-27-and-31-pounds-of-garbagemonth">a. What is the probability they generate betweeen 27 and 31 pounds of garbage/month</h4>
+
+<p>\(\mu = 28, \sigma = 2\)</p>
+
+<p>\(P(27 \leq X \leq 31\)</p>
+
+<p>\(z(27) = 0.5, z(31) = 1.5\)</p>
+
+<p>\(P(0.5 \lt z \lt 1.5 = 0.9332 - 0.308 = 0.6247\)</p>
+
+<h4 id="b-what-is-the-probability-they-have-more-than-302-pounds-per-month">b. what is the probability they have more than 30.2 pounds per month:</h4>
+
+<h3 id="example-7-a-school-has-an-entrance-exam-to-qualify-and-candidates-must-score-within-top-10-to-get-admitted-the-test-has-a-mean-of-200-and-a-standard-deviation-of-20-find-the-lowest-possible-score-to-qualify-assume-test-scores-are-normally-distributed">Example 7: A school has an entrance exam to qualify and candidates must score within top 10% to get admitted. The test has a mean of 200 and a standard deviation of 20. find the lowest possible score to qualify. Assume test scores are normally distributed.</h3>
+
+<p>\(\mu = 200, \sigma = 20\)</p>
+
+<p>need to find z value associated with this area.</p>
+
+<p>\(1 - 0.1 = 0.9\)</p>
+
+<p>look up probability = 0.9 to find corresponding z value</p>
+
+<p>z = 1.285</p>
+
+<p>plug into equation</p>
+
+<p>\(\frac{\bar{x} - 200}{20} = 1.285\)</p>
+
+<p>\(\bar{x} = 225.9\)</p>
+
+<h3 id="example-8-a-study-resported-tahat-6-of-american-drivers-read-the-newspaper-while-driving-if-300-drivers-are-selected-at-random-find-the-probabiliity-that-exactly-25-say-they-read-the-newspaper-while-driving">Example 8: A study resported tahat 6% of American drivers read the newspaper while driving. If 300 drivers are selected at random, find the probabiliity that exactly 25 say they read the newspaper while driving</h3>
+
+<p>n = 300 p = 0.06 q = 1 - p = 0.94</p>
+
+<p>Can we do normal approximation? \(\mu = n \cdot p = (300)(0.06) = 18 = \mu\)</p>
+
+<p>\(nq = 300 \cdot 0.94 = 282 \geq 5\) yes</p>
+
+<p>\(\sigma = \sqrt{npq} = \sqrt{(300)(0.06)(0.94)} = 4.11\)</p>
+
+<p>need range of values + continuity correction</p>
+
+<p>\(P(25-0.5 \lt x \lt 25 + 0.5)\)</p>
+
+<p>Calculate z values</p>
+
+<p>\(z_24.5 = \frac{\bar{x} - \mu}{\sigma} = \frac{24.5 - 18}{4.11} = 1.58\)</p>
+
+<p>\(z_25.5 = \frac{\bar{x} - \mu}{\sigma} = \frac{25.5 - 18}{4.11} = 1.82\)</p>
+
+<p>\(P(z \leq 1.58) = 0.9429\)</p>
+
+<p>\(P(z \leq 1.82) = 0.9656\)</p>
+
+<p>\(P(z \leq 1.82) - P(z \leq 1.82) - 0.9656 - 0.9429 = 0.027\)</p>
+
+<p>2.7% chance that exactly 25 drivers read the newspaper while driving</p>
+
+<h3 id="example-9-approximately-10-of-americans-are-allergice-to-ragweed-if-a-random-sample-of-200-people-is-selected-find-the-probability-that-10-or-more-will-be-allergic-to-ragweed">Example 9: Approximately 10% of Americans are allergice to ragweed. If a random sample of 200 people is selected, find the probability that 10 or more will be allergic to ragweed</h3>
+
+<p>p = 0.1, q = 1-p = 0.9, n = 200</p>
+
+<p>\(\mu = n\cdot p = 20\)</p>
+
+<p>\(\sigma = \sqrt{npq} = 4.24\)</p>
+
+<p>continuity correction: \(P(X \geq 10) = P(X \geq 9.5\)</p>
+
+<p>\(z(9.5) = -2.47\)</p>
+
+<p>\(P(z \leq -2.47) = -0.0068\)</p>
+
+<p>\(P(x \geq 10) = 1 - 0.0068 = 0.9932\)</p>
+
+<h3 id="example-10-a-survey-showed-children-ages-2-to-5-years-old-watch-an-average-of-25-hours-of-tv-per-week-assume-this-is-normally-distributed-and-standard-deviation-is-3-hours-if-20-children-between-2-5-years-ofld-are-randomly-selected-what-is-the-probability-they-watch-more-than-26e-hours-per-week-of-tv">Example 10: A survey showed children ages 2 to 5 years old watch an average of 25 hours of TV per week. Assume this is normally distributed and standard deviation is 3 hours. If 20 children between 2-5 years ofld are randomly selected, what is the probability they watch more than 26.e hours per week of TV</h3>
+
+<p>population: \(\mu = 25, \sigma = 3, samplesize = 20 = n\)</p>
+
+<p>prob\((\bar{x}\geq26.3)\)</p>
+
+<p>\(z( = \frac{\bar{x}-\mu}{\frac{\sigma}{\sqrt{n}}} = 1.94\)</p>
+
+<p>\(P(Z \ge1 1.938) = 0.0262\)</p>
+
+<p>2.62 % chance</p>
+
+<h3 id="example-11-the-average-age-of-acar-in-the-us-is-8-years96-months-assume-the-standard-deviation-is-16-months-if-a-random-sample-of-36-cars-is-selected-find-the-probability-that-the-mean-of-their-age-is-between-90-and-100-months">Example 11: The average age of acar in the US is 8 years(96 months). Assume the standard deviation is 16 months. If a random sample of 36 cars is selected, find the probability that the mean of their age is between 90 and 100 months.</h3>
+
+<p>\(n \geq 30\) Assume data is normally distributed by central limit thm.</p>
+
+<p>\(z_90 = \frac{90-96}{\frac{16}{\sqrt{36}}} = -2.25\)</p>
+
+<p>\(P(Z \leq -2.25 ) = 0.0122\)</p>
+
+<p>\(Z_100 = \frac{100 -96}{\frac{16}{\sqrt{36}}} = 1.5\)</p>
+
+<p>\(P(Z_100 \leq 1.5) = -0.0122\)</p>
+
+<p>\(P(Z_100 - P(Z_90) = 0.9332 - 0.0122 = 0.921\)</p>
